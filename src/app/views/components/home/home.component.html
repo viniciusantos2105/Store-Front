@@ -1,1 +1,60 @@
-<p>home works!</p>
+
+<mat-card class="mat-elevation-z8">
+    <mat-card-header>
+        <mat-card-title class="title">Novidades</mat-card-title>
+        <div class="container">
+            <button class="arrow-left-control" aria-label="Previous-image">
+                ❮
+            </button>
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <img src="https://img.freepik.com/fotos-premium/uma-linda-garota-modelo-em-roupas-esportivas-casuais-com-capuz-posando-sobre-fundo-branco-isolado-com_179135-4049.jpg" class="item current-item">
+
+                    <img src="https://ph-cdn3.ecosweb.com.br/imagens01/foto/moda-masculina/camiseta-manga-curta/camiseta-preta-e-marrom-com-cava-raglan_304648_301_2.jpg" class="item">
+
+                    <img src="https://i.pinimg.com/474x/6f/22/a5/6f22a55072b983d0cf2a40166fd6293c.jpg" class="item">
+
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_710158-MLB49010665283_022022-W.jpg" class="item">
+
+                    <img src="https://t-static.dafiti.com.br/QwU86IvdJE5c9Oe5a2e4x_NfpkU=/fit-in/427x620/static.dafiti.com.br/p/ks-casual-%2526-sport-cal%25c3%25a7a-jeans-delav%25c3%25aa-masculino-azul-claro-iii-2706-10610701-1-product.jpg" class="item">
+                    
+                    <img src="https://images.tcdn.com.br/img/img_prod/802666/calca_mom_jeans_feminina_algodao_alta_tradicional_anticorpus_1549_1_d2d9def87b542ea82c859656b64d3875.jpg" class="item">
+                </div>
+            </div>
+            <button class="arrow-right-control"  aria-label="Next-image"> ❯ </button>
+        </div>
+    </mat-card-header>
+</mat-card>
+<script>
+    const controls = document.querySelectorAll('.control');
+    let current = 0;
+    const items = document.querySelectorAll('.item');
+    const maxItem = items.length;
+
+    controls.forEach((control) =>{
+        control.addEventListener("click", ()=> {
+            const isLeft = control.classList.contains("arrow-left-control");
+
+            if(isLeft){
+                current -= 1;
+            }
+            else{
+                current += 1;
+            }
+
+            if(currentItem >= maxItem){
+                current = 0;
+            }
+
+            if(currentItem < 0){
+                current = maxItem - 1;
+            }
+
+           items.forEach(item => item.classList.remove('current-item'));
+        
+            items[current].scrollIntoView({
+                inline:"center"
+            });
+        });
+    });
+</script>

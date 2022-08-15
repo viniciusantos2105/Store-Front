@@ -1,0 +1,68 @@
+mat-card{
+    width: 80%;
+    height: 50%;
+    margin: 1rem auto auto auto;
+}
+
+.title{
+    text-align: center;
+}
+
+.container{
+    position: relative;
+    padding: 15px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.gallery-wrapper{
+    overflow-x: auto;
+}
+
+.gallery{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.arrow-left-control,
+.arrow-right-control{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: 0.1;
+}
+
+.arrow-right-control{
+    left: auto;
+    right: 0;
+    background: linear-gradient(to right, transparent 0%, black 200%)
+}
+
+.arrow-left-control:hover,
+.arrow-right-control:hover{
+    opacity: 1;
+}
+
+.item{
+    height: 300px;
+    width: 300px;
+    opacity: 0.6;
+    transition: all 600ms ease-in-out;
+}
+
+.current-item{
+    opacity: 1;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+

@@ -22,6 +22,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HeaderComponent } from './views/components/templeate/header/header.component';
 import { FooterComponent } from './views/components/templeate/footer/footer.component';
 import { NavComponent } from './views/components/templeate/nav/nav.component';
+import { HomeComponent } from './views/components/home/home.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { NavComponent } from './views/components/templeate/nav/nav.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

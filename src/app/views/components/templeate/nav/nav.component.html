@@ -1,0 +1,32 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink>
+                <i class="material-icons">home</i> Home
+            </a>
+            <a mat-list-item routerLink>
+              CAMISA <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+            <a mat-list-item routerLink>
+              CALÇA <i class="material-icons">keyboard_arrow_right</i>
+              </a>
+            <a mat-list-item routerLink>
+              SHORT <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+            <a mat-list-item routerLink>
+              TÊNIS <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+            <a mat-list-item routerLink>
+              MARCAS <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>view_headline</mat-icon>
+      </button>
+    </div>
+  
+  </mat-drawer-container>
+  

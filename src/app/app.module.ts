@@ -24,6 +24,7 @@ import { FooterComponent } from './views/components/templeate/footer/footer.comp
 import { NavComponent } from './views/components/templeate/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { ProductAllComponent } from './views/components/product/product-all/product-all.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {MatMenuModule} from '@angular/material/menu';
     FooterComponent,
     NavComponent,
     HomeComponent,
+    ProductAllComponent,
   ],
   imports: [
     BrowserModule,

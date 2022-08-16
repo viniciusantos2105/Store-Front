@@ -1,3 +1,15 @@
 <mat-toolbar class="header mat-elevation-z8">
     <h1 class="mat-elevation-z8">Store</h1>
+
+    <button mat-button [matMenuTriggerFor]="menu" class="user">
+        <mat-icon>
+            account_circle
+        </mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" class="menu-login">
+        <button mat-menu-item class="login">Entrar</button>
+        <button mat-menu-item class="register">Cadastrar-se</button>
+    </mat-menu>
+
 </mat-toolbar>

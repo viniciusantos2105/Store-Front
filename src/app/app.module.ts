@@ -23,6 +23,7 @@ import { HeaderComponent } from './views/components/templeate/header/header.comp
 import { FooterComponent } from './views/components/templeate/footer/footer.component';
 import { NavComponent } from './views/components/templeate/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { HomeComponent } from './views/components/home/home.component';
     MatInputModule,
     MatDatepickerModule,
     MatPaginatorModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

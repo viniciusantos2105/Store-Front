@@ -1,8 +1,6 @@
 .header{
     height: 10%;
     display: flex;
-    align-items: center;
-    justify-content: left;
 }
 
 h1{
@@ -13,4 +11,33 @@ h1{
 
 .example-spacer {
     flex: 1 1 auto;
+}
+
+.container{
+    display: flex;
+    text-align: center;
+    margin-left: 85%;
+}
+
+.user{
+    margin-left: 84%;
+}
+
+.login{
+    border: 2px solid black;
+    border-radius: 3px;
+    color: black; 
+    background-color: white;
+}
+
+.register{
+    margin-top: 10px;
+    border: 2px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+}
+
+.menu-login{
+    background-color: white;
 }

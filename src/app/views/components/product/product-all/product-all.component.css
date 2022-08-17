@@ -4,6 +4,15 @@
     margin-right: auto;
 }
 
+.search{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.bar{
+    width: 97%;
+}
+
 table {
     width: 100%;
 }

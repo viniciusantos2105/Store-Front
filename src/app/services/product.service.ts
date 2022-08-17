@@ -17,4 +17,9 @@ export class ProductService {
     const url = this.baseUrl + "/product/allProducts"
     return this.http.get<Product[]>(url);
   }
+
+  findFilter(string: any):Observable<Product[]>{
+    const url = this.baseUrl + "/product/findFilter"
+    return this.http.get<Product[]>(url)
+  }
 }

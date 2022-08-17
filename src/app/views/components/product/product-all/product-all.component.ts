@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-all',
@@ -17,7 +18,17 @@ export class ProductAllComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
+  constructor(private service : ProductService){}
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.findAll();
+  }
+
+  findAll(): void{
+    this.service.findAll().subscribe((resposta) => {
+      this.products = resposta;
+      console.log(this.products)
+    })
   }
 }

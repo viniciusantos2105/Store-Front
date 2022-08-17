@@ -1,1 +1,20 @@
-<p>operator-create works!</p>
+<div class="container">
+
+    <mat-form-field appearance="fill" class="bar">
+        <mat-label>Username</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="bar">
+        <mat-label>Senha</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="end">
+        <mat-label>Cargo</mat-label>
+        <mat-select disableRipple>
+          <mat-option value="1">Admin</mat-option>
+          <mat-option value="2">Vendedor</mat-option>
+          <mat-option value="3">Estoquista</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <button mat-raised-button color="primary" class="end">Criar operador</button>
+</div>

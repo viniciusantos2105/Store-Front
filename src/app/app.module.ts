@@ -27,6 +27,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ProductAllComponent } from './views/components/product/product-all/product-all.component';
 import { ProductFindFilterComponent } from './views/components/product/product-find-filter/product-find-filter.component';
 import { OperatorCreateComponent } from './views/components/operator/operator-create/operator-create.component';
+import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
+import { RegisterComponent } from './views/components/register/register.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { OperatorCreateComponent } from './views/components/operator/operator-cr
     ProductAllComponent,
     ProductFindFilterComponent,
     OperatorCreateComponent,
+    ClientCreateComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

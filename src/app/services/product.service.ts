@@ -17,5 +17,4 @@ export class ProductService {
     const url = this.baseUrl + "/product/allProducts"
     return this.http.get<Product[]>(url);
   }
-
 }

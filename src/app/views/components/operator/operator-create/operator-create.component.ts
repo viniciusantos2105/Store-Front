@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Operator } from 'src/app/models/operator';
+import { OperatorService } from 'src/app/services/operator.service';
 
 @Component({
   selector: 'app-operator-create',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperatorCreateComponent implements OnInit {
 
-  constructor() { }
+  operator: Operator = {
+    id: '',
+    username: 'vinicius001',
+    password:  '1234',
+    responsibility: 'Admin'
+  }
+
+  constructor(private router : Router,
+    private service : OperatorService) { }
 
   ngOnInit(): void {
   }
 
+  cancel(): void{
+    this.router.navigate(['register'])
+  }
+
+  create(): void{
+    this.service.create(this.operator).subscribe((resposta)=>{
+      this.router.navigate(['register'])
+      this.service.message('Operador criado com sucesso!!!')
+    })
+  }
 }

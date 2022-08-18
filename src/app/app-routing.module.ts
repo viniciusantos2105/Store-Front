@@ -25,11 +25,11 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'register/client',
+    path: 'client-create',
     component: ClientCreateComponent
   },
   {
-    path: 'register/operator',
+    path: 'operator',
     component: OperatorCreateComponent
   }
 ];

@@ -12,9 +12,9 @@ export class OperatorCreateComponent implements OnInit {
 
   operator: Operator = {
     id: '',
-    username: 'vinicius001',
+    username: 'vinicius002',
     password:  '1234',
-    responsibility: 'Admin'
+    responsibility: 'ADMIN'
   }
 
   constructor(private router : Router,

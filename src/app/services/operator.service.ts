@@ -7,7 +7,7 @@ import { Operator } from "../models/operator";
 
 @Injectable({
     providedIn: 'root'
-  })
+})
 export class OperatorService {
 
     baseUrl: String = environment.baseUrl;

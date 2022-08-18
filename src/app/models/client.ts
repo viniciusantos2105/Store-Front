@@ -1,3 +1,5 @@
+import { Address } from "./address";
+
 export interface Client{
     id?: any
     username: String;
@@ -5,6 +7,5 @@ export interface Client{
     cpf: String;
     email: String;
     password: String;
-    cep: String;
-    number: String;
+    address: Address;
 } 

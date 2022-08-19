@@ -13,13 +13,13 @@ export class ClientCreateComponent implements OnInit {
 
   client: Client = {
     id: '',
-    username: 'vinicius008',
+    username: 'vinicius005',
     name: 'vinicius',
-    cpf: '352.808.230-58',
-    email: 'email2@gmail.com',
+    cpf: '510.942.750-00',
+    email: 'email@2gmail.com',
     password: '12345',
     address:{
-      cep: '01034-030',
+      cep: '01034-00',
       rua: '',
       bairro: '',
       cidade: '',
@@ -42,6 +42,17 @@ export class ClientCreateComponent implements OnInit {
     this.service.create(this.client).subscribe((resposta)=>{
       this.router.navigate(['register'])
       this.service.message('Cliente criado com sucesso!!!')
+    }, err => {
+      console.log(err)
+      if(err.error.error.match('já existente')){
+        this.service.message(err.error.error)
+      }
+      if(err.error.error.match('já existe')){
+        this.service.message(err.error.error)
+      }
+      if(err.error.error.match('Endereço não')){
+        this.service.message(err.error.error)
+      }
     })
   }
 }

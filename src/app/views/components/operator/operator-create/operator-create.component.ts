@@ -31,6 +31,10 @@ export class OperatorCreateComponent implements OnInit {
     this.service.create(this.operator).subscribe((resposta)=>{
       this.router.navigate(['register'])
       this.service.message('Operador criado com sucesso!!!')
+    }, err =>{
+      if(err.error.error.match('já existente')){
+        this.service.message(err.error.error)
+      }
     })
   }
 }

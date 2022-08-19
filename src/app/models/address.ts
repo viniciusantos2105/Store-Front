@@ -1,4 +1,4 @@
-export interface Address{
+export interface Address {
     id?: any,
     cep: String;
     rua: String;

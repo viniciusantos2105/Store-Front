@@ -29,6 +29,7 @@ import { ProductFindFilterComponent } from './views/components/product/product-f
 import { OperatorCreateComponent } from './views/components/operator/operator-create/operator-create.component';
 import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 import { RegisterComponent } from './views/components/register/register.component';
+import { LoginComponent } from './views/components/login/login.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { RegisterComponent } from './views/components/register/register.componen
     OperatorCreateComponent,
     ClientCreateComponent,
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

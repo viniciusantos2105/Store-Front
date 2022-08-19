@@ -1,22 +1,28 @@
 <h1>Cadastro operador</h1>
 <div class="container">
 
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Username</mat-label>
-        <input matInput placeholder="Ex. usuario001">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Senha</mat-label>
-        <input matInput placeholder="Ex. password123">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="end">
-        <mat-label>Cargo</mat-label>
-        <mat-select disableRipple>
-          <mat-option value="1">ADMIN</mat-option>
-          <mat-option value="2">VENDEDOR</mat-option>
-          <mat-option value="3">ESTOQUISTA</mat-option>
-        </mat-select>
-      </mat-form-field>
-    <button (click)="create()" mat-stroked-button color="accent" class="end">Criar operador</button>
-    <button (click)="cancel()" mat-stroked-button color="warn" class="end">Cancelar</button>
+  <mat-form-field appearance="fill" class="bar">
+    <mat-label>Username</mat-label>
+    <input [(ngModel)]="operator.username" [formControl]="username" required username="username" matInput placeholder="Ex. usuario001">
+    <mat-error *ngIf="username.invalid">{{ errorValidUsername() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="bar">
+    <mat-label>Senha</mat-label>
+    <input [(ngModel)]="operator.password" [formControl]="password" required password="password" matInput placeholder="Ex. password123">
+    <mat-error *ngIf="password.invalid">{{ errorValidPassword() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="end">
+    <mat-label>Cargo</mat-label>
+    <mat-select disableRipple [(ngModel)]="operator.responsibility" [formControl]="responsibility" required responsibility="responsibility">
+      <mat-option value="1">ADMIN</mat-option>
+      <mat-option value="2">VENDEDOR</mat-option>
+      <mat-option value="3">ESTOQUISTA</mat-option>
+    </mat-select>
+    <mat-error *ngIf="responsibility.invalid">{{ errorValidResponsibility() }}</mat-error>
+  </mat-form-field>
+
+  <button (click)="create()" mat-stroked-button color="accent" class="end">Criar operador</button>
+  <button (click)="cancel()" mat-stroked-button color="warn" class="end">Cancelar</button>
 </div>

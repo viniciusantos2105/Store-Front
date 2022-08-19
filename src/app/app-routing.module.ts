@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 import { HomeComponent } from './views/components/home/home.component';
+import { LoginComponent } from './views/components/login/login.component';
 import { OperatorCreateComponent } from './views/components/operator/operator-create/operator-create.component';
 import { ProductAllComponent } from './views/components/product/product-all/product-all.component';
 import { ProductFindFilterComponent } from './views/components/product/product-find-filter/product-find-filter.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'operator',
     component: OperatorCreateComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

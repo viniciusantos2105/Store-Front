@@ -1,6 +1,6 @@
 import { Address } from "./address";
 
-export interface Client{
+export interface Client {
     id?: any
     username: String;
     name: String;

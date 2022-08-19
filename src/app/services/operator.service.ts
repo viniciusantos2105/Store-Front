@@ -12,15 +12,15 @@ export class OperatorService {
 
     baseUrl: String = environment.baseUrl;
 
-    constructor(private http : HttpClient,
-        private snack : MatSnackBar){ }
+    constructor(private http: HttpClient,
+        private snack: MatSnackBar) { }
 
-    create(operator : Operator):Observable<Operator>{
+    create(operator: Operator): Observable<Operator> {
         const url = this.baseUrl + "/operator/create";
         return this.http.post<Operator>(url, operator);
     }
 
-    message(msg : String): void{
+    message(msg: String): void {
         this.snack.open(`${msg}`, 'OK', {
             horizontalPosition: 'end',
             verticalPosition: 'top',

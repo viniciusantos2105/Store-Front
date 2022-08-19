@@ -18,6 +18,11 @@ export class ProductService {
     return this.http.get<Product[]>(url);
   }
 
+  findFilter(msg: String):Observable<Product[]>{
+    const url = this.baseUrl + "/product/findFilter"
+    return this.http.get<Product[]>(url);
+  }
+
   create(product: Product):Observable<Product>{
     const url = this.baseUrl + "/product/create";
     return this.http.post<Product>(url, product);

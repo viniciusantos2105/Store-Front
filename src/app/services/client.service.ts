@@ -4,6 +4,8 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 import { Client } from "../models/client";
+import { Login } from "../models/login";
+import { Operator } from "../models/operator";
 
 @Injectable({
     providedIn: 'root'
@@ -18,6 +20,11 @@ export class ClientService {
     create(client : Client):Observable<Client>{
         const url = this.baseUrl + "/client/create";
         return this.http.post<Client>(url, client);
+    }
+
+    login(login: Login): Observable<Login>{
+        const url = this.baseUrl + "/operator/login"
+        return this.http.post<Operator>(url, login)
     }
 
     message(msg : String): void{

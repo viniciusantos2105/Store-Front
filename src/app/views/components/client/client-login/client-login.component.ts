@@ -24,4 +24,15 @@ export class ClientLoginComponent implements OnInit {
   registerNavigate(): void{
     this.router.navigate(['register'])
   }
+
+  logar(): void {
+    this.service.login(this.login).subscribe((resposta) => {
+      this.router.navigate([''])
+      this.service.message('Login realizado com sucesso!!!')
+    }, err => {
+      if (err.error.error.match('Unauthorized')) {
+        this.service.message('Login ou senha inválido')
+      }
+    })
+  }
 }

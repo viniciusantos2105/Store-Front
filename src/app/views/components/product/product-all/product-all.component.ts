@@ -18,17 +18,18 @@ export class ProductAllComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private service : ProductService){}
+  constructor(private service: ProductService) { }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.findAll();
   }
 
-  findAll(): void{
+  findAll(): void {
     this.service.findAll().subscribe((resposta) => {
       this.products = resposta;
       console.log(this.products)
     })
   }
+
 }

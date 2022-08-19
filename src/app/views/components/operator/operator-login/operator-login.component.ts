@@ -21,14 +21,18 @@ export class OperatorLoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registerNavigate(): void{
+  registerNavigate(): void {
     this.router.navigate(['register'])
   }
 
-  logar(): void{
+  logar(): void {
     this.service.login(this.login).subscribe((resposta) => {
       this.router.navigate([''])
       this.service.message('Login realizado com sucesso!!!')
+    }, err => {
+      if (err.error.error.match('Unauthorized')) {
+        this.service.message('Login ou senha inválido')
+      }
     })
   }
 }

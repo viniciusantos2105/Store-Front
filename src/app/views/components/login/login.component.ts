@@ -13,7 +13,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registerNavigate(): void{
-    this.router.navigate(['register'])
+  clientNavigate(): void{
+    this.router.navigate(['client-login'])
+  }
+
+  operatorNavigate(): void{
+    this.router.navigate(['operator-login'])
   }
 }

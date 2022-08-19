@@ -18,6 +18,6 @@ export class RegisterComponent implements OnInit {
   }
 
   operatorNavigate(): void{
-    this.router.navigate(['operator'])
+    this.router.navigate(['operator-create'])
   }
 }

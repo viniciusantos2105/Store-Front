@@ -30,6 +30,8 @@ import { OperatorCreateComponent } from './views/components/operator/operator-cr
 import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 import { RegisterComponent } from './views/components/register/register.component';
 import { LoginComponent } from './views/components/login/login.component';
+import { OperatorLoginComponent } from './views/components/operator/operator-login/operator-login.component';
+import { ClientLoginComponent } from './views/components/client/client-login/client-login.component';
 
 
 @NgModule({
@@ -45,6 +47,8 @@ import { LoginComponent } from './views/components/login/login.component';
     ClientCreateComponent,
     RegisterComponent,
     LoginComponent,
+    OperatorLoginComponent,
+    ClientLoginComponent,
   ],
   imports: [
     BrowserModule,

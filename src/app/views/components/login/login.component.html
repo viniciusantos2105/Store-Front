@@ -1,13 +1,5 @@
-<div class="container">
 <h1>Login</h1>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Username</mat-label>
-        <input matInput placeholder="Ex. usuario001">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Senha</mat-label>
-        <input matInput placeholder="Ex. password123">
-    </mat-form-field>
-    <button mat-raised-button color="primary" class="bar">Entrar</button>
-    <button (click)="registerNavigate()"  mat-raised-button color="accent" class="end">Cadastra-se</button>
+<div class="container">
+    <button (click)="operatorNavigate()" mat-raised-button color="primary" class="bar">Criar operador</button>
+    <button (click)="clientNavigate() " mat-raised-button color="primary" class="bar">Criar cliente</button> 
 </div>

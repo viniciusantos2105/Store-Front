@@ -16,13 +16,13 @@
   <mat-form-field appearance="fill" class="end">
     <mat-label>Cargo</mat-label>
     <mat-select disableRipple [(ngModel)]="operator.responsibility" [formControl]="responsibility" required responsibility="responsibility">
-      <mat-option value="1">ADMIN</mat-option>
-      <mat-option value="2">VENDEDOR</mat-option>
-      <mat-option value="3">ESTOQUISTA</mat-option>
+      <mat-option value="ADMIN">ADMIN</mat-option>
+      <mat-option value="VENDEDOR">VENDEDOR</mat-option>
+      <mat-option value="ESTOQUISTA">ESTOQUISTA</mat-option>
     </mat-select>
     <mat-error *ngIf="responsibility.invalid">{{ errorValidResponsibility() }}</mat-error>
   </mat-form-field>
 
-  <button (click)="create()" mat-stroked-button color="accent" class="end">Criar operador</button>
+  <button (click)="create()" [disabled]="errorValidResponsibility() || errorValidPassword() || errorValidUsername()" mat-stroked-button color="accent" class="end">Criar operador</button>
   <button (click)="cancel()" mat-stroked-button color="warn" class="end">Cancelar</button>
 </div>

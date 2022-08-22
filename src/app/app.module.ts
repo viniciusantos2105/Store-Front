@@ -32,6 +32,8 @@ import { RegisterComponent } from './views/components/register/register.componen
 import { LoginComponent } from './views/components/login/login.component';
 import { OperatorLoginComponent } from './views/components/operator/operator-login/operator-login.component';
 import { ClientLoginComponent } from './views/components/client/client-login/client-login.component';
+import { OperatorLogadoComponent } from './views/components/operator/operator-logado/operator-logado.component';
+import { ProductMenuComponent } from './views/components/product/product-menu/product-menu.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { ClientLoginComponent } from './views/components/client/client-login/cli
     LoginComponent,
     OperatorLoginComponent,
     ClientLoginComponent,
+    OperatorLogadoComponent,
+    ProductMenuComponent,
   ],
   imports: [
     BrowserModule,

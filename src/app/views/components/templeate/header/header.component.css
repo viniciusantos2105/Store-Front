@@ -24,10 +24,8 @@ h1{
 }
 
 .login{
-    background-color: white;
-    color: black;
+    color: white;
     text-align: center;
-    border: 1px solid black;
     border-radius: 2px;
     cursor: pointer;
     transition: 1s;
@@ -39,11 +37,9 @@ h1{
 }
 
 .register{
-    background-color: white;
-    color: black;
+    color: white;
     margin-top: 10px;
     text-align: center;
-    border: 1px solid black;
     border-radius: 3px;
     cursor: pointer;
     transition: 1s;

@@ -5,6 +5,7 @@ import { ClientLoginComponent } from './views/components/client/client-login/cli
 import { HomeComponent } from './views/components/home/home.component';
 import { LoginComponent } from './views/components/login/login.component';
 import { OperatorCreateComponent } from './views/components/operator/operator-create/operator-create.component';
+import { OperatorLogadoComponent } from './views/components/operator/operator-logado/operator-logado.component';
 import { OperatorLoginComponent } from './views/components/operator/operator-login/operator-login.component';
 import { ProductAllComponent } from './views/components/product/product-all/product-all.component';
 import { ProductFindFilterComponent } from './views/components/product/product-find-filter/product-find-filter.component';
@@ -46,6 +47,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'operator-logado',
+    component: OperatorLogadoComponent,
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 

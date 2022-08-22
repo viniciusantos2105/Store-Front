@@ -23,7 +23,7 @@ export class ClientService {
     }
 
     login(login: Login): Observable<Login>{
-        const url = this.baseUrl + "/operator/login"
+        const url = this.baseUrl + "/client/login"
         return this.http.post<Operator>(url, login)
     }
 

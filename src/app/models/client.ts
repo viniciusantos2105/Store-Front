@@ -1,7 +1,7 @@
 import { Address } from "./address";
 
 export interface Client {
-    id?: any
+    id?: any;
     username: String;
     name: String;
     cpf: String;

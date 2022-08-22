@@ -28,7 +28,6 @@ export class ProductAllComponent implements AfterViewInit {
   findAll(): void {
     this.service.findAll().subscribe((resposta) => {
       this.products = resposta;
-      console.log(this.products)
     })
   }
 

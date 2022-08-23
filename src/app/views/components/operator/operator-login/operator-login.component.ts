@@ -28,12 +28,10 @@ export class OperatorLoginComponent implements OnInit {
   }
 
   logar(): void {
-    this.service.login(this.login).subscribe((resposta) => {
-      this.router.navigate(['operator-logado'])
-      this.service.message('Login realizado com sucesso!!!')
       this.service.token(this.login).subscribe((resposta)=>{
         this.authService.responseJwt.token = resposta.token
-      })
+      this.router.navigate(['operator-logado'])
+      this.service.message('Login realizado com sucesso!!!')
     }, err => {
       if (err.error.error.match('Unauthorized')) {
         this.service.message('Login ou senha inválido')

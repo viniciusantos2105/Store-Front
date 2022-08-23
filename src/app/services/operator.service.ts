@@ -24,16 +24,11 @@ export class OperatorService {
         return this.http.post<Operator>(url, operator);
     }
 
-    login(login: Login): Observable<Login>{
-        const url = this.baseUrl + "/operator/login"
-        return this.http.post<Operator>(url, login)
-    }
-
     token(login: Login): Observable<JwtToken>{
         const url = this.baseUrl + "/operator/login"
         return this.http.post<JwtToken>(url, login)
         .pipe(
-            tap((JwtToken) => this.auth.responseJwt = JwtToken))
+            tap((responseJwt) => this.auth.responseJwt = responseJwt))
     }
 
     message(msg: String): void {

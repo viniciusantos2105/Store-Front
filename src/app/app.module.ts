@@ -34,6 +34,10 @@ import { OperatorLoginComponent } from './views/components/operator/operator-log
 import { ClientLoginComponent } from './views/components/client/client-login/client-login.component';
 import { OperatorLogadoComponent } from './views/components/operator/operator-logado/operator-logado.component';
 import { ProductMenuComponent } from './views/components/product/product-menu/product-menu.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './guards/auth-guard';
+import { ProductCreateComponent } from './views/components/product/product-create/product-create.component';
+
 
 
 @NgModule({
@@ -53,6 +57,7 @@ import { ProductMenuComponent } from './views/components/product/product-menu/pr
     ClientLoginComponent,
     OperatorLogadoComponent,
     ProductMenuComponent,
+    ProductCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,7 +86,7 @@ import { ProductMenuComponent } from './views/components/product/product-menu/pr
     MatSnackBarModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

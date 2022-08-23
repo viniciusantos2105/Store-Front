@@ -1,5 +1,42 @@
-<div class="container">
-    <button mat-raised-button color="primary" class="bar">Adicionar produto</button>
-    <button mat-raised-button color="primary" class="bar">Atualizar preço</button>
-    <button mat-raised-button color="primary" class="bar">Atualizar estoque</button> 
+<div class="box">
+    <button (click)="createNavigate()" mat-raised-button color="primary" class="inital">Adicionar produto</button>
+    <button mat-raised-button color="primary" class="center">Atualizar preço</button>
+    <button mat-raised-button color="primary" class="final">Atualizar estoque</button> 
 </div>
+<br>
+<div class="mat-elevation-z8 container">
+    <table mat-table [dataSource]="products">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Np. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+        <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Preço </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons 
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>

@@ -28,6 +28,7 @@ export class OperatorLogadoComponent implements OnInit {
     this.username = this.auth.responseJwt.username
     this.service.getOperator(this.username).subscribe((resposta)=>{
       this.operatorAuthenticated = resposta
+      console.log(this.operatorAuthenticated)
     })
   }
 }

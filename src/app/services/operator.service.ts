@@ -33,7 +33,7 @@ export class OperatorService {
         const url = this.baseUrl + "/operator/login"
         return this.http.post<JwtToken>(url, login)
         .pipe(
-            tap((Jwt) => this.auth.responseJwt = Jwt))
+            tap((JwtToken) => this.auth.responseJwt = JwtToken))
     }
 
     message(msg: String): void {

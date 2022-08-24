@@ -27,9 +27,9 @@ export class OperatorLoginComponent implements OnInit {
     this.router.navigate(['register'])
   }
 
-  logar(): void {
+  logar() {
       this.service.token(this.login).subscribe((resposta)=>{
-        this.authService.responseJwt.token = resposta.token
+        localStorage.setItem('token', resposta.token)
       this.router.navigate(['operator-logado'])
       this.service.message('Login realizado com sucesso!!!')
     }, err => {

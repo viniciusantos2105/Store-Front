@@ -1,6 +1,8 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Product } from 'src/app/models/product';
+import { AuthService } from 'src/app/services/auth.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -21,7 +23,8 @@ export class ProductCreateComponent implements OnInit {
   quantity = new FormControl(0, [Validators.min(1)])
   price = new FormControl(0, [Validators.min(1)])
 
-  constructor(private service: ProductService) { }
+  constructor(private service: ProductService,
+    private authService: AuthService) { }
 
   ngOnInit(): void {
   }

@@ -17,8 +17,8 @@
     <mat-label>Cargo</mat-label>
     <mat-select disableRipple [(ngModel)]="operator.responsibility" [formControl]="responsibility" required responsibility="responsibility">
       <mat-option value="ADMIN">ADMIN</mat-option>
-      <mat-option value="VENDEDOR">VENDEDOR</mat-option>
-      <mat-option value="ESTOQUISTA">ESTOQUISTA</mat-option>
+      <mat-option value="SALESMAN">VENDEDOR</mat-option>
+      <mat-option value="STOCKHOLDER">ESTOQUISTA</mat-option>
     </mat-select>
     <mat-error *ngIf="responsibility.invalid">{{ errorValidResponsibility() }}</mat-error>
   </mat-form-field>

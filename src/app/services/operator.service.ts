@@ -27,8 +27,6 @@ export class OperatorService {
     token(login: Login): Observable<JwtToken>{
         const url = this.baseUrl + "/operator/login"
         return this.http.post<JwtToken>(url, login)
-        .pipe(
-            tap((responseJwt) => this.auth.responseJwt = responseJwt))
     }
 
     message(msg: String): void {

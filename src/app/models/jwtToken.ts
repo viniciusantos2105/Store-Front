@@ -1,4 +1,4 @@
 export interface JwtToken{
-    token: JwtToken;
+    token: string;
     username: String;
 }

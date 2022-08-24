@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -37,7 +37,7 @@ import { ProductMenuComponent } from './views/components/product/product-menu/pr
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './guards/auth-guard';
 import { ProductCreateComponent } from './views/components/product/product-create/product-create.component';
-
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 
 @NgModule({
@@ -86,7 +86,11 @@ import { ProductCreateComponent } from './views/components/product/product-creat
     MatSnackBarModule,
     MatMenuModule
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [AuthService, AuthGuardService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

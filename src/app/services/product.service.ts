@@ -1,9 +1,10 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Product } from '../models/product';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,10 @@ export class ProductService {
 
   baseUrl: String = environment.baseUrl;
 
+  
   constructor(private http : HttpClient,
-    private snack: MatSnackBar) { }
+    private snack: MatSnackBar,
+    private auth: AuthService) { }
 
   message(msg: String): void {
     this.snack.open(`${msg}`, 'OK', {

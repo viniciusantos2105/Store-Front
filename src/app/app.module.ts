@@ -78,7 +78,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     MatButtonModule,
     MatListModule,
     MatCardModule,
-    MatTableModule,
+    MatTableModule, 
     MatSelectModule,
     MatInputModule,
     MatDatepickerModule,

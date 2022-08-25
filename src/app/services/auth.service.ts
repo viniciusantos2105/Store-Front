@@ -1,4 +1,4 @@
-import { HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { HttpClient, HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { JwtToken } from '../models/jwtToken';
@@ -7,9 +7,9 @@ import { Login } from '../models/login';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService{
- 
-  readonly URL = 'https://store-loja.herokuapp.com';    
+export class AuthService{ 
+
+  constructor(private http: HttpClient) { }
 
   public responseJwt!: JwtToken;
 

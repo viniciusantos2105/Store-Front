@@ -11,6 +11,8 @@ import { OperatorService } from 'src/app/services/operator.service';
 })
 export class OperatorLoginComponent implements OnInit {
   
+  loginOperatorData = {}
+
   login: Login = {
     username: '',
     password: ''
@@ -27,15 +29,22 @@ export class OperatorLoginComponent implements OnInit {
     this.router.navigate(['register'])
   }
 
-  logar() {
+  log() {
       this.service.token(this.login).subscribe((resposta)=>{
         localStorage.setItem('token', resposta.token)
-      this.router.navigate(['operator-logado'])
+        this.router.navigate(['operator-logado'])
       this.service.message('Login realizado com sucesso!!!')
     }, err => {
       if (err.error.error.match('Unauthorized')) {
         this.service.message('Login ou senha inválido')
       }
     })
+  }
+
+  logar(){
+    this.service.token(this.login).subscribe((resposta =>{
+      this.router.navigate(['operator-logado'])
+      this.service.message('Login realizado com sucesso!!!')
+    }))
   }
 }

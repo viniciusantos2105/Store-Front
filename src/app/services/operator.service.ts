@@ -24,6 +24,11 @@ export class OperatorService {
         return this.http.post<Operator>(url, operator);
     }
 
+    login(login: Login): Observable<Operator>{
+        const url = this.baseUrl + "/operator/login"
+        return this.http.post<Operator>(url, login)
+    }
+
     token(login: Login): Observable<JwtToken>{
         const url = this.baseUrl + "/operator/login"
         return this.http.post<JwtToken>(url, login)

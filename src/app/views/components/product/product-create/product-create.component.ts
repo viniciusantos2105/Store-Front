@@ -1,6 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { AuthService } from 'src/app/services/auth.service';
 import { ProductService } from 'src/app/services/product.service';
@@ -24,7 +25,8 @@ export class ProductCreateComponent implements OnInit {
   price = new FormControl(0, [Validators.min(1)])
 
   constructor(private service: ProductService,
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -33,5 +35,9 @@ export class ProductCreateComponent implements OnInit {
     this.service.create(this.product).subscribe((resposta)=>{
       this.service.message('Produto criado com sucesso!!!')
     })
+  }
+
+  back():void{
+    this.router.navigate(['product-menu'])
   }
 }

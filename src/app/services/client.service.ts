@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpBackend, HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Observable } from "rxjs";
@@ -15,9 +15,11 @@ export class ClientService {
     baseUrl: String = environment.baseUrl;
 
     constructor(private http : HttpClient,
-        private snack : MatSnackBar){ }
+        private snack : MatSnackBar,
+        private httpBack : HttpBackend){ }
 
     create(client : Client):Observable<Client>{
+        this.http = new HttpClient(this.httpBack)
         const url = this.baseUrl + "/client/create";
         return this.http.post<Client>(url, client);
     }

@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpBackend, HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Observable, tap } from "rxjs";
@@ -17,19 +17,18 @@ export class OperatorService {
 
     constructor(private http: HttpClient,
         private snack: MatSnackBar,
-        private auth: AuthService) { }
+        private auth: AuthService,
+        private httpBack : HttpBackend) { }
 
     create(operator: Operator): Observable<Operator> {
+        //usei o httpBackend para a rota ser ignorada pelo interceptador
+        this.http = new HttpClient(this.httpBack)
         const url = this.baseUrl + "/operator/create";
         return this.http.post<Operator>(url, operator);
     }
 
-    login(login: Login): Observable<Operator>{
-        const url = this.baseUrl + "/operator/login"
-        return this.http.post<Operator>(url, login)
-    }
-
     token(login: Login): Observable<JwtToken>{
+        this.http = new HttpClient(this.httpBack)
         const url = this.baseUrl + "/operator/login"
         return this.http.post<JwtToken>(url, login)
     }

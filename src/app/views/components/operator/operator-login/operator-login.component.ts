@@ -29,8 +29,8 @@ export class OperatorLoginComponent implements OnInit {
     this.router.navigate(['register'])
   }
 
-  log() {
-      this.service.token(this.login).subscribe((resposta)=>{
+  logar() {
+      this.service.token(this.login).subscribe(resposta=>{
         localStorage.setItem('token', resposta.token)
         this.router.navigate(['operator-logado'])
       this.service.message('Login realizado com sucesso!!!')
@@ -39,12 +39,5 @@ export class OperatorLoginComponent implements OnInit {
         this.service.message('Login ou senha inválido')
       }
     })
-  }
-
-  logar(){
-    this.service.token(this.login).subscribe((resposta =>{
-      this.router.navigate(['operator-logado'])
-      this.service.message('Login realizado com sucesso!!!')
-    }))
   }
 }

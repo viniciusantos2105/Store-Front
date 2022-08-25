@@ -41,4 +41,13 @@ export class ProductService {
     return this.http.post<Product>(url, product);
   }
 
+  updateQuantity(product: Product): Observable<Product>{
+    const url = this.baseUrl + "/product/addStock";
+    return this.http.patch<Product>(url, product)
+  }
+
+  updatePrice(product: Product): Observable<Product>{
+    const url = this.baseUrl + "/product/attPrice"
+    return this.http.post<Product>(url, product)
+  }
 }

@@ -29,6 +29,18 @@ export class ProductMenuComponent implements OnInit {
     this.router.navigate(['product-create'])
   }
 
+  updateQuantityNavigate():void{
+    this.router.navigate(['product-addStock'])
+  }
+
+  updatePriceNavigate():void{
+    this.router.navigate(['product-attPrice'])
+  }
+
+  backNavigate():void{
+    this.router.navigate(['operator-logado'])
+  }
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.findAll();

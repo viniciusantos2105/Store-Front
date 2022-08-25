@@ -38,6 +38,8 @@ import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './guards/auth-guard';
 import { ProductCreateComponent } from './views/components/product/product-create/product-create.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { ProductUpdateQuantityComponent } from './views/components/product/product-update-quantity/product-update-quantity.component';
+import { ProductUpdatePriceComponent } from './views/components/product/product-update-price/product-update-price.component';
 
 
 @NgModule({
@@ -58,6 +60,8 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     OperatorLogadoComponent,
     ProductMenuComponent,
     ProductCreateComponent,
+    ProductUpdateQuantityComponent,
+    ProductUpdatePriceComponent,
   ],
   imports: [
     BrowserModule,

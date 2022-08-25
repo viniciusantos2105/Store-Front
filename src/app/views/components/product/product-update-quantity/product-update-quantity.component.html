@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Atualizar quantidade do produto</h1>
+    <mat-form-field appearance="fill" class="bar">
+        <mat-label>Id do produto</mat-label>
+        <input [(ngModel)]="product.id" [formControl]="id" required id="id" matInput placeholder="Ex. 1">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="bar">
+        <mat-label>Quantidade do produto</mat-label>
+        <input type="number" [(ngModel)]="product.quantity" [formControl]="quantity" required quantity="quantity" matInput placeholder="Ex. 20">
+    </mat-form-field>
+    <button (click)="updateQuantity()" mat-raised-button color="primary" class="center">Adicionar quantidade</button>
+    <button (click)="back()" mat-raised-button color="primary" class="center">Voltar</button>
+</div>

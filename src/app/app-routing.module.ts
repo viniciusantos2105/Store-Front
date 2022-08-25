@@ -12,6 +12,8 @@ import { ProductAllComponent } from './views/components/product/product-all/prod
 import { ProductCreateComponent } from './views/components/product/product-create/product-create.component';
 import { ProductFindFilterComponent } from './views/components/product/product-find-filter/product-find-filter.component';
 import { ProductMenuComponent } from './views/components/product/product-menu/product-menu.component';
+import { ProductUpdatePriceComponent } from './views/components/product/product-update-price/product-update-price.component';
+import { ProductUpdateQuantityComponent } from './views/components/product/product-update-quantity/product-update-quantity.component';
 import { RegisterComponent } from './views/components/register/register.component';
 
 const routes: Routes = [
@@ -64,6 +66,16 @@ const routes: Routes = [
   {
     path: 'product-create',
     component: ProductCreateComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path: 'product-addStock',
+    component: ProductUpdateQuantityComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path: 'product-attPrice',
+    component: ProductUpdatePriceComponent,
     canActivate:[AuthGuardService]
   },
   {

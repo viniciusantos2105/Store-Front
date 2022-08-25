@@ -1,7 +1,7 @@
 <div class="box">
     <button (click)="createNavigate()" mat-raised-button color="primary" class="inital">Adicionar produto</button>
-    <button mat-raised-button color="primary" class="center">Atualizar preço</button>
-    <button mat-raised-button color="primary" class="final">Atualizar estoque</button> 
+    <button (click)="updatePriceNavigate()" mat-raised-button color="primary" class="center">Atualizar preço</button>
+    <button (click)="updateQuantityNavigate()" mat-raised-button color="primary" class="final">Atualizar estoque</button> 
 </div>
 <br>
 <div class="mat-elevation-z8 container">
@@ -39,4 +39,5 @@
                    showFirstLastButtons 
                    aria-label="Select page of periodic elements">
     </mat-paginator>
-  </div>
+</div>
+<button (click)="backNavigate()" mat-raised-button color="primary" class="meio">Voltar</button>

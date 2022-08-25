@@ -34,7 +34,6 @@ export class OperatorCreateComponent implements OnInit {
 
   create(): void {
     this.service.create(this.operator).subscribe((resposta) => {
-      localStorage.setItem('token', 'test')
       this.router.navigate(['login'])
       this.service.message('Operador criado com sucesso!!!')
     }, err => {

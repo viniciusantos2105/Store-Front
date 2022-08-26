@@ -6,6 +6,7 @@ import { ClientLoginComponent } from './views/components/client/client-login/cli
 import { HomeComponent } from './views/components/home/home.component';
 import { LoginComponent } from './views/components/login/login.component';
 import { OperatorCreateComponent } from './views/components/operator/operator-create/operator-create.component';
+import { OperatorDeleteComponent } from './views/components/operator/operator-delete/operator-delete.component';
 import { OperatorLogadoComponent } from './views/components/operator/operator-logado/operator-logado.component';
 import { OperatorLoginComponent } from './views/components/operator/operator-login/operator-login.component';
 import { OperatorMenuComponent } from './views/components/operator/operator-menu/operator-menu.component';
@@ -69,6 +70,11 @@ const routes: Routes = [
     path: 'operator-updateResponsibility',
     component: OperatorUpdateResponsibilityComponent,
     canActivate: [AuthGuardService]
+  },
+  {
+    path: 'operator-dismiss',
+    component: OperatorDeleteComponent,
+
   },
   {
     path: 'product-menu',

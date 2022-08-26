@@ -1,4 +1,4 @@
-import { HttpBackend, HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpBackend, HttpClient, HttpHeaders, HttpRequest } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Observable, tap } from "rxjs";
@@ -53,6 +53,11 @@ export class OperatorService {
 
     updateResponsibility(operator: Operator): Observable<Operator>{
         const url = this.baseUrl + "/operator/updateResponsibility";
-        return this.http.patch<Operator>(url, operator)
+        return this.http.patch<Operator>(url, operator);
+    }
+
+    deleteOperator(id: any): Observable<void>{
+        const url = this.baseUrl + `/operator/delete${id}`;
+        return this.http.delete<void>(url)
     }
 }

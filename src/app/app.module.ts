@@ -42,6 +42,7 @@ import { ProductUpdateQuantityComponent } from './views/components/product/produ
 import { ProductUpdatePriceComponent } from './views/components/product/product-update-price/product-update-price.component';
 import { OperatorMenuComponent } from './views/components/operator/operator-menu/operator-menu.component';
 import { OperatorUpdateResponsibilityComponent } from './views/components/operator/operator-update-responsibility/operator-update-responsibility.component';
+import { OperatorDeleteComponent } from './views/components/operator/operator-delete/operator-delete.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { OperatorUpdateResponsibilityComponent } from './views/components/operat
     ProductUpdatePriceComponent,
     OperatorMenuComponent,
     OperatorUpdateResponsibilityComponent,
+    OperatorDeleteComponent,
 
   ],
   imports: [

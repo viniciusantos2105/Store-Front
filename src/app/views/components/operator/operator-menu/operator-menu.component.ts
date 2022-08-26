@@ -38,6 +38,10 @@ export class OperatorMenuComponent implements OnInit {
     this.router.navigate(['operator-updateResponsibility'])
   }
 
+  dismissNavigate():void{
+    this.router.navigate(['operator-dismiss'])
+  }
+
   findAll(): void {
     this.service.findAll().subscribe((resposta) => {
       this.operators = resposta;

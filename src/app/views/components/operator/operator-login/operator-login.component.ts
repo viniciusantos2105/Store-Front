@@ -31,6 +31,7 @@ export class OperatorLoginComponent implements OnInit {
 
   logar() {
       this.service.token(this.login).subscribe(resposta=>{
+        this.authService.username = resposta.username
         localStorage.setItem('token', resposta.token)
         this.router.navigate(['operator-logado'])
       this.service.message('Login realizado com sucesso!!!')

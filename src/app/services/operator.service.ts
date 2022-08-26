@@ -45,4 +45,9 @@ export class OperatorService {
         const url = this.baseUrl + "/operator/getOperator";
         return this.http.post<Operator>(url, username);
     }
+
+    findAll(): Observable<Operator[]>{
+        const url = this.baseUrl + "/operator/findOperators";
+        return this.http.get<Operator[]>(url);
+    }
 }

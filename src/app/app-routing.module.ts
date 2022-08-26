@@ -8,6 +8,7 @@ import { LoginComponent } from './views/components/login/login.component';
 import { OperatorCreateComponent } from './views/components/operator/operator-create/operator-create.component';
 import { OperatorLogadoComponent } from './views/components/operator/operator-logado/operator-logado.component';
 import { OperatorLoginComponent } from './views/components/operator/operator-login/operator-login.component';
+import { OperatorMenuComponent } from './views/components/operator/operator-menu/operator-menu.component';
 import { ProductAllComponent } from './views/components/product/product-all/product-all.component';
 import { ProductCreateComponent } from './views/components/product/product-create/product-create.component';
 import { ProductFindFilterComponent } from './views/components/product/product-find-filter/product-find-filter.component';
@@ -57,6 +58,11 @@ const routes: Routes = [
     path: 'operator-logado',
     component: OperatorLogadoComponent,
     canActivate:[AuthGuardService]
+  },
+  {
+    path: 'operator-menu',
+    component: OperatorMenuComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'product-menu',

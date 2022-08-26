@@ -40,6 +40,7 @@ import { ProductCreateComponent } from './views/components/product/product-creat
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { ProductUpdateQuantityComponent } from './views/components/product/product-update-quantity/product-update-quantity.component';
 import { ProductUpdatePriceComponent } from './views/components/product/product-update-price/product-update-price.component';
+import { OperatorMenuComponent } from './views/components/operator/operator-menu/operator-menu.component';
 
 
 @NgModule({
@@ -62,6 +63,8 @@ import { ProductUpdatePriceComponent } from './views/components/product/product-
     ProductCreateComponent,
     ProductUpdateQuantityComponent,
     ProductUpdatePriceComponent,
+    OperatorMenuComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,8 @@ export class AuthService{
 
   public responseJwt!: JwtToken;
 
+  public username: String = '';
+
   public isAuthenticated(): boolean{
     return !!localStorage.getItem('token')
   }

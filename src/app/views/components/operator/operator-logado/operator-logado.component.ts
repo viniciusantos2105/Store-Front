@@ -10,7 +10,6 @@ import { OperatorService } from 'src/app/services/operator.service';
   styleUrls: ['./operator-logado.component.css']
 })
 export class OperatorLogadoComponent implements OnInit {
-  username: String | undefined
 
   operatorAuthenticated: Operator = {
     id: '',
@@ -27,8 +26,7 @@ export class OperatorLogadoComponent implements OnInit {
   }
 
   retorno():void{
-    this.username = this.auth.responseJwt.username
-    this.service.getOperator(this.username).subscribe((resposta)=>{
+    this.service.getOperator(this.auth.username).subscribe((resposta)=>{
       this.operatorAuthenticated = resposta
     })
   }

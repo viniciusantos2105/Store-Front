@@ -25,13 +25,25 @@ export class OperatorLogadoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  retorno():void{
-    this.service.getOperator(this.auth.username).subscribe((resposta)=>{
+  retorno() {
+    this.service.getOperator(`${this.auth.getUsername()}`).subscribe(resposta =>{
       this.operatorAuthenticated = resposta
     })
   }
 
   navigateProduct():void{
     this.router.navigate(['product-menu'])
+  }
+
+  navigateOperatorMenu():void{
+    this.service.getOperator(`${this.auth.getUsername()}`).subscribe(resposta =>{
+      this.operatorAuthenticated = resposta
+      if(this.operatorAuthenticated.responsibility == "ADMIN"){
+        this.router.navigate(['operator-menu'])
+      }
+      else{
+        this.service.message('Você não tem permissão')
+      }
+    })
   }
 }

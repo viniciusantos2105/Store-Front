@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { Operator } from 'src/app/models/operator';
 import { OperatorService } from 'src/app/services/operator.service';
 
@@ -18,7 +19,8 @@ export class OperatorMenuComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private service: OperatorService) { }
+  constructor(private service: OperatorService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +28,10 @@ export class OperatorMenuComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.findAll();
+  }
+
+  backNavigate():void{
+    this.router.navigate(['operator-logado'])
   }
 
   findAll(): void {

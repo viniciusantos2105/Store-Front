@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { JwtToken } from '../models/jwtToken';
 import { Login } from '../models/login';
+import { Operator } from '../models/operator';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,13 @@ export class AuthService{
   public responseJwt!: JwtToken;
 
   public username: String = '';
+
+  operator: Operator = {
+    id: '',
+    username: '',
+    password: '',
+    responsibility: ''
+  }
 
   public isAuthenticated(): boolean{
     return !!localStorage.getItem('token')
@@ -29,5 +37,9 @@ export class AuthService{
 
   getToken(){
     return localStorage.getItem('token')
+  }
+
+  getUsername(){
+    return localStorage.getItem('username')
   }
 }

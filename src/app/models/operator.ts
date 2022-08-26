@@ -1,6 +1,6 @@
 export interface Operator{
     id?: any;
-    username: String;
+    username: string;
     password: String;
     responsibility: String;
 }

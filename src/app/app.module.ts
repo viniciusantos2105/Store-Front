@@ -41,6 +41,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { ProductUpdateQuantityComponent } from './views/components/product/product-update-quantity/product-update-quantity.component';
 import { ProductUpdatePriceComponent } from './views/components/product/product-update-price/product-update-price.component';
 import { OperatorMenuComponent } from './views/components/operator/operator-menu/operator-menu.component';
+import { OperatorUpdateResponsibilityComponent } from './views/components/operator/operator-update-responsibility/operator-update-responsibility.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { OperatorMenuComponent } from './views/components/operator/operator-menu
     ProductUpdateQuantityComponent,
     ProductUpdatePriceComponent,
     OperatorMenuComponent,
+    OperatorUpdateResponsibilityComponent,
 
   ],
   imports: [

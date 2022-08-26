@@ -1,0 +1,23 @@
+<h1>Atualizar cargo</h1>
+<div class="container">
+
+  <mat-form-field appearance="fill" class="bar">
+    <mat-label>ID</mat-label>
+    <input [(ngModel)]="operator.id" [formControl]="id" required id="id" matInput placeholder="Ex. 1">
+    <mat-error *ngIf="id.invalid">{{ errorValidId() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="end">
+    <mat-label>Cargo</mat-label>
+    <mat-select disableRipple [(ngModel)]="operator.responsibility" [formControl]="responsibility" required responsibility="responsibility">
+      <mat-option value="ADMIN">ADMIN</mat-option>
+      <mat-option value="SALESMAN">VENDEDOR</mat-option>
+      <mat-option value="STOCKHOLDER">ESTOQUISTA</mat-option>
+    </mat-select>
+    <mat-error *ngIf="responsibility.invalid">{{ errorValidResponsibility() }}</mat-error>
+  </mat-form-field>
+
+  <button (click)="update()" [disabled]="errorValidResponsibility() || errorValidId()" mat-stroked-button color="accent" class="end">Atualizar operador</button>
+  <button mat-stroked-button color="warn" class="end">Cancelar</button>
+</div>
+<button (click)="backNavigate()" mat-raised-button color="primary" class="meio">Voltar</button>

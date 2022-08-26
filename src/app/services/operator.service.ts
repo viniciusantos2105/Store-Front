@@ -50,4 +50,9 @@ export class OperatorService {
         const url = this.baseUrl + "/operator/findOperators";
         return this.http.get<Operator[]>(url);
     }
+
+    updateResponsibility(operator: Operator): Observable<Operator>{
+        const url = this.baseUrl + "/operator/updateResponsibility";
+        return this.http.patch<Operator>(url, operator)
+    }
 }

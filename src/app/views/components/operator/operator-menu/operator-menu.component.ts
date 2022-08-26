@@ -34,6 +34,10 @@ export class OperatorMenuComponent implements OnInit {
     this.router.navigate(['operator-logado'])
   }
 
+  updateNavigate():void{
+    this.router.navigate(['operator-updateResponsibility'])
+  }
+
   findAll(): void {
     this.service.findAll().subscribe((resposta) => {
       this.operators = resposta;

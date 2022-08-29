@@ -42,6 +42,6 @@ export class ProductCreateComponent implements OnInit {
   }
 
   back():void{
-    this.router.navigate(['product-menu'])
+    this.router.navigate(['product'])
   }
 }

@@ -14,10 +14,10 @@ export class LoginComponent implements OnInit {
   }
 
   clientNavigate(): void{
-    this.router.navigate(['client-login'])
+    this.router.navigate(['client/login'])
   }
 
   operatorNavigate(): void{
-    this.router.navigate(['operator-login'])
+    this.router.navigate(['operator/login'])
   }
 }

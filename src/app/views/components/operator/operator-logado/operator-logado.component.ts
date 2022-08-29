@@ -38,7 +38,7 @@ export class OperatorLogadoComponent implements OnInit {
         this.service.message('Você não tem permissão')
       }
       else{
-        this.router.navigate(['product-menu'])
+        this.router.navigate(['product'])
       }
     })
   }
@@ -47,7 +47,7 @@ export class OperatorLogadoComponent implements OnInit {
     this.service.getOperator(`${this.auth.getUsername()}`).subscribe(resposta =>{
       this.operatorAuthenticated = resposta
       if(this.operatorAuthenticated.responsibility == "ADMIN"){
-        this.router.navigate(['operator-menu'])
+        this.router.navigate(['operator'])
       }
       else{
         this.service.message('Você não tem permissão')

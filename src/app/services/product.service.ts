@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpBackend, HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
@@ -16,7 +16,8 @@ export class ProductService {
   
   constructor(private http : HttpClient,
     private snack: MatSnackBar,
-    private auth: AuthService) { }
+    private auth: AuthService,
+    private httpBack : HttpBackend) { }
 
   message(msg: String): void {
     this.snack.open(`${msg}`, 'OK', {
@@ -27,6 +28,7 @@ export class ProductService {
 }
 
   findAll():Observable<Product[]>{
+    this.http = new HttpClient(this.httpBack)
     const url = this.baseUrl + "/product/allProducts"
     return this.http.get<Product[]>(url);
   }

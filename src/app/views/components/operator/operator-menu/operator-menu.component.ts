@@ -31,15 +31,15 @@ export class OperatorMenuComponent implements OnInit {
   }
 
   backNavigate():void{
-    this.router.navigate(['operator-logado'])
+    this.router.navigate(['operator/logado'])
   }
 
   updateNavigate():void{
-    this.router.navigate(['operator-updateResponsibility'])
+    this.router.navigate(['operator/updateResponsibility'])
   }
 
   dismissNavigate():void{
-    this.router.navigate(['operator-dismiss'])
+    this.router.navigate(['operator/dismiss'])
   }
 
   findAll(): void {

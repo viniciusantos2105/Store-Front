@@ -18,6 +18,5 @@
   </mat-form-field>
 
   <button (click)="update()" [disabled]="errorValidResponsibility() || errorValidId()" mat-stroked-button color="accent" class="end">Atualizar operador</button>
-  <button mat-stroked-button color="warn" class="end">Cancelar</button>
+  <button (click)="backNavigate()"  mat-stroked-button color="warn" class="end">Cancelar</button>
 </div>
-<button (click)="backNavigate()" mat-raised-button color="primary" class="meio">Voltar</button>

@@ -1,23 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
-  selector: 'app-product-menu',
-  templateUrl: './product-menu.component.html',
-  styleUrls: ['./product-menu.component.css']
+  selector: 'app-request-menu',
+  templateUrl: './request-menu.component.html',
+  styleUrls: ['./request-menu.component.css']
 })
-export class ProductMenuComponent implements OnInit {
-
-  constructor(private service: ProductService,
-    private router: Router) { }
+export class RequestMenuComponent implements OnInit {
 
   products: Product[] = [];
 
-  displayedColumns: string[] = ['id', 'name', 'quantity', 'price'];
+  displayedColumns: string[] = ['id', 'name', 'quantity', 'price', 'action'];
   dataSource = new MatTableDataSource<Product>(this.products);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -25,21 +21,7 @@ export class ProductMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createNavigate():void{
-    this.router.navigate(['product/create'])
-  }
-
-  updateQuantityNavigate():void{
-    this.router.navigate(['product/addStock'])
-  }
-
-  updatePriceNavigate():void{
-    this.router.navigate(['product/attPrice'])
-  }
-
-  backNavigate():void{
-    this.router.navigate(['operator/logado'])
-  }
+  constructor(private service: ProductService) { }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -51,4 +33,6 @@ export class ProductMenuComponent implements OnInit {
       this.products = resposta;
     })
   }
+
+
 }

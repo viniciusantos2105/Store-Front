@@ -34,7 +34,7 @@ export class OperatorUpdateResponsibilityComponent implements OnInit {
   }
 
   backNavigate():void{
-    this.router.navigate(['operator-menu'])
+    this.router.navigate(['operator'])
   }
 
   errorValidId(){

@@ -19,6 +19,8 @@ import { ProductMenuComponent } from './views/components/product/product-menu/pr
 import { ProductUpdatePriceComponent } from './views/components/product/product-update-price/product-update-price.component';
 import { ProductUpdateQuantityComponent } from './views/components/product/product-update-quantity/product-update-quantity.component';
 import { RegisterComponent } from './views/components/register/register.component';
+import { RequestMenuComponent } from './views/components/requests/request-menu/request-menu.component';
+import { RequestSaleComponent } from './views/components/requests/request-sale/request-sale.component';
 
 const routes: Routes = [
   {
@@ -42,7 +44,7 @@ const routes: Routes = [
     component: ClientCreateComponent
   },
   {
-    path: 'client-login',
+    path: 'client/login',
     component: ClientLoginComponent
   },
   {
@@ -51,11 +53,11 @@ const routes: Routes = [
     canActivate:[AuthGuardService]
   },
   {
-    path: 'operator-create',
+    path: 'operator/create',
     component: OperatorCreateComponent
   },
   {
-    path: 'operator-login',
+    path: 'operator/login',
     component: OperatorLoginComponent
   },
   {
@@ -63,44 +65,54 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'operator-logado',
+    path: 'operator/logado',
     component: OperatorLogadoComponent,
     canActivate:[AuthGuardService]
   },
   {
-    path: 'operator-menu',
+    path: 'operator',
     component: OperatorMenuComponent,
     canActivate: [AuthGuardService]
   },
   {
-    path: 'operator-updateResponsibility',
+    path: 'operator/updateResponsibility',
     component: OperatorUpdateResponsibilityComponent,
     canActivate: [AuthGuardService]
   },
   {
-    path: 'operator-dismiss',
+    path: 'operator/dismiss',
     component: OperatorDeleteComponent,
 
   },
   {
-    path: 'product-menu',
+    path: 'product',
     component: ProductMenuComponent,
     canActivate:[AuthGuardService]
   },
   {
-    path: 'product-create',
+    path: 'product/create',
     component: ProductCreateComponent,
     canActivate:[AuthGuardService]
   },
   {
-    path: 'product-addStock',
+    path: 'product/addStock',
     component: ProductUpdateQuantityComponent,
     canActivate:[AuthGuardService]
   },
   {
-    path: 'product-attPrice',
+    path: 'product/attPrice',
     component: ProductUpdatePriceComponent,
     canActivate:[AuthGuardService]
+  },
+  {
+    path: 'request',
+    component: RequestMenuComponent,
+
+  },
+  {
+    path: 'request/sale/:id',
+    component: RequestSaleComponent,
+    
   },
   {
     path: '**',

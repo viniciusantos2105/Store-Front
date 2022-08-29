@@ -33,6 +33,10 @@ export class OperatorDeleteComponent implements OnInit {
     })
   }
 
+  backNavigate():void{
+    this.router.navigate(['operator'])
+  }
+
   errorValidId(){
     if(this.id.invalid){
       return 'O id não pode ser nulo!';

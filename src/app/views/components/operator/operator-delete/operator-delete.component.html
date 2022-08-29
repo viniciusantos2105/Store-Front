@@ -8,5 +8,5 @@
   </mat-form-field>
 
   <button (click)="dismiss()" [disabled]="errorValidId()" mat-stroked-button color="accent" class="end">Demitir operador</button>
-  <button mat-stroked-button color="warn" class="end">Cancelar</button>
+  <button (click)="backNavigate()" mat-stroked-button color="warn" class="end">Cancelar</button>
 </div>

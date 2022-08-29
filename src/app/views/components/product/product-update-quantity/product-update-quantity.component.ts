@@ -28,7 +28,7 @@ export class ProductUpdateQuantityComponent implements OnInit {
   }
 
   back():void{
-    this.router.navigate(['product-menu'])
+    this.router.navigate(['product'])
   }
 
   updateQuantity():void{

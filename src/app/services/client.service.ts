@@ -4,6 +4,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 import { Client } from "../models/client";
+import { JwtToken } from "../models/jwtToken";
 import { Login } from "../models/login";
 import { Operator } from "../models/operator";
 
@@ -24,9 +25,16 @@ export class ClientService {
         return this.http.post<Client>(url, client);
     }
 
-    login(login: Login): Observable<Login>{
+    getClient(token: string): Observable<Client>{
+        const url = this.baseUrl + "/client/getClient";
+        return this.http.get<Client>(url);
+    }
+
+
+    token(login: Login): Observable<JwtToken>{
+        this.http = new HttpClient(this.httpBack)
         const url = this.baseUrl + "/client/login"
-        return this.http.post<Operator>(url, login)
+        return this.http.post<JwtToken>(url, login)
     }
 
     message(msg : String): void{

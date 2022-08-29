@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './guards/auth-guard';
 import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
+import { ClientLogadoComponent } from './views/components/client/client-logado/client-logado.component';
 import { ClientLoginComponent } from './views/components/client/client-login/client-login.component';
 import { HomeComponent } from './views/components/home/home.component';
 import { LoginComponent } from './views/components/login/login.component';
@@ -43,6 +44,11 @@ const routes: Routes = [
   {
     path: 'client-login',
     component: ClientLoginComponent
+  },
+  {
+    path: 'client-logado',
+    component: ClientLogadoComponent,
+    canActivate:[AuthGuardService]
   },
   {
     path: 'operator-create',

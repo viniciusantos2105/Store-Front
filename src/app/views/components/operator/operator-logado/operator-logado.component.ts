@@ -32,7 +32,15 @@ export class OperatorLogadoComponent implements OnInit {
   }
 
   navigateProduct():void{
-    this.router.navigate(['product-menu'])
+    this.service.getOperator(`${this.auth.getUsername()}`).subscribe(resposta =>{
+      this.operatorAuthenticated = resposta
+      if(this.operatorAuthenticated.responsibility == "SALESMAN"){
+        this.service.message('Você não tem permissão')
+      }
+      else{
+        this.router.navigate(['product-menu'])
+      }
+    })
   }
 
   navigateOperatorMenu():void{

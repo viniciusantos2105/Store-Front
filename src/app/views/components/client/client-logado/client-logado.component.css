@@ -1,0 +1,35 @@
+mat-card{
+    width: 80%;
+    height: 50%;
+    margin: 1rem auto auto auto;
+}
+
+button{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 1rem;
+}
+
+input{
+    margin-top: auto;
+    color: white;
+    background-color: #424242;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 1rem;
+}
+
+h4{
+    text-align: center;
+}
+
+.end{
+    margin-bottom: 1rem;
+}
+
+.container{
+    display: inline;
+    align-items: initial;
+}

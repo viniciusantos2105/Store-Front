@@ -56,8 +56,8 @@ export class OperatorService {
         return this.http.patch<Operator>(url, operator);
     }
 
-    deleteOperator(id: any): Observable<void>{
-        const url = this.baseUrl + `/operator/delete${id}`;
+    deleteOperator(idFinal: any): Observable<void>{
+        const url = this.baseUrl + "/operator/delete";
         return this.http.delete<void>(url)
     }
 }

@@ -43,6 +43,7 @@ import { ProductUpdatePriceComponent } from './views/components/product/product-
 import { OperatorMenuComponent } from './views/components/operator/operator-menu/operator-menu.component';
 import { OperatorUpdateResponsibilityComponent } from './views/components/operator/operator-update-responsibility/operator-update-responsibility.component';
 import { OperatorDeleteComponent } from './views/components/operator/operator-delete/operator-delete.component';
+import { ClientLogadoComponent } from './views/components/client/client-logado/client-logado.component';
 
 
 @NgModule({
@@ -68,6 +69,7 @@ import { OperatorDeleteComponent } from './views/components/operator/operator-de
     OperatorMenuComponent,
     OperatorUpdateResponsibilityComponent,
     OperatorDeleteComponent,
+    ClientLogadoComponent,
 
   ],
   imports: [

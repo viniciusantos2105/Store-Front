@@ -27,6 +27,7 @@
 button{
     width: 20%;
     margin-right: 1rem;
+    text-align: center;
 }
 
 mat-card{

@@ -41,4 +41,8 @@ export class ClientLogadoComponent implements OnInit {
       this.client = resposta
     })
   }
+
+  navigateRequest(): void{
+    this.router.navigate(['request'])
+  }
 }

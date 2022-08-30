@@ -29,7 +29,7 @@ export class ClientLoginComponent implements OnInit {
     this.service.token(this.login).subscribe(resposta=>{
       localStorage.setItem('username', resposta.username)
       localStorage.setItem('token', resposta.token)
-      this.router.navigate(['client-logado'])
+      this.router.navigate(['client/logado'])
     this.service.message('Login realizado com sucesso!!!')
   }, err => {
     if (err.error.error.match('Unauthorized')) {

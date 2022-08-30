@@ -48,7 +48,7 @@ const routes: Routes = [
     component: ClientLoginComponent
   },
   {
-    path: 'client-logado',
+    path: 'client/logado',
     component: ClientLogadoComponent,
     canActivate:[AuthGuardService]
   },

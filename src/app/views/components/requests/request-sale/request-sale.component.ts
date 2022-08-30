@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatButton } from '@angular/material/button';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { RequestDTO } from 'src/app/models/requestDTO';
@@ -70,7 +71,8 @@ export class RequestSaleComponent implements OnInit {
     })
   }
 
-  back():void{
-    this.router.navigate(['product'])
+  cancel():void{
+    this.router.navigate(['request'])
   }
+
 }

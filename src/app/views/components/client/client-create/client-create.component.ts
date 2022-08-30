@@ -49,7 +49,7 @@ export class ClientCreateComponent implements OnInit {
 
   create(): void {
     this.service.create(this.client).subscribe((resposta) => {
-      this.router.navigate(['client-login'])
+      this.router.navigate(['client/login'])
       this.service.message('Cliente criado com sucesso!!!')
     }, err => {
       console.log(err)

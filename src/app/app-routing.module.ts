@@ -40,7 +40,7 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'client-create',
+    path: 'client/create',
     component: ClientCreateComponent
   },
   {
@@ -107,12 +107,12 @@ const routes: Routes = [
   {
     path: 'request',
     component: RequestMenuComponent,
-
+    canActivate:[AuthGuardService]
   },
   {
     path: 'request/sale/:id',
     component: RequestSaleComponent,
-    
+    canActivate:[AuthGuardService]
   },
   {
     path: '**',

@@ -23,6 +23,7 @@ export class OperatorLogadoComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+    this.retorno()
   }
 
   retorno() {

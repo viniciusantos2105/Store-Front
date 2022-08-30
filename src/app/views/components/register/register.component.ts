@@ -14,10 +14,10 @@ export class RegisterComponent implements OnInit {
   }
 
   clientNavigate(): void{
-    this.router.navigate(['client-create'])
+    this.router.navigate(['client/create'])
   }
 
   operatorNavigate(): void{
-    this.router.navigate(['operator-create'])
+    this.router.navigate(['operator/create'])
   }
 }

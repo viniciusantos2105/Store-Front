@@ -33,6 +33,7 @@ export class ClientLogadoComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+    this.getClient()
   }
 
   getClient(): void{

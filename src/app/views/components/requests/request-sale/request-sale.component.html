@@ -1,1 +1,48 @@
-<p>request-sale works!</p>
+<div class="box">
+    <mat-card class="two">
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Nome do produto</mat-label>
+            <input [(ngModel)]="product.name" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar" >
+            <mat-label class="white">Quantidade do produto</mat-label>
+            <input [(ngModel)]="product.quantity" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Preço do produto</mat-label>
+            <input [(ngModel)]="product.price" matInput disabled class="white">
+        </mat-form-field>
+    </mat-card>
+
+
+    <mat-card class="one">
+
+        <mat-form-field appearance="fill" class="end">
+            <mat-label>Quantidade</mat-label>
+            <mat-select disableRipple [(ngModel)]="requestDTO.quantity" [formControl]="quantity" required quantity="quantity">
+              <mat-option value="1">1</mat-option>
+              <mat-option value="2">2</mat-option>
+              <mat-option value="3">3</mat-option>
+              <mat-option value="4">4</mat-option>
+              <mat-option value="5">5</mat-option>
+              <mat-option value="6">6</mat-option>
+              <mat-option value="7">7</mat-option>
+              <mat-option value="8">8</mat-option>
+              <mat-option value="9">9</mat-option>
+              <mat-option value="10">10</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label>CEP</mat-label>
+            <input [(ngModel)]="requestDTO.address" matInput disabled>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label>Numero residencial</mat-label>
+            <input [(ngModel)]="requestDTO.number" matInput disabled>
+        </mat-form-field>
+        <button (click)="sale()" mat-stroked-button color="accent" class="end">Comprar</button>
+        <button  mat-stroked-button color="warn" class="end">Cancelar</button>
+    </mat-card> 
+</div>
+

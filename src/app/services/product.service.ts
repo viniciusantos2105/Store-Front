@@ -33,6 +33,12 @@ export class ProductService {
     return this.http.get<Product[]>(url);
   }
 
+  findById(id: any):Observable<Product>{
+    this.http = new HttpClient(this.httpBack)
+    const url = `${this.baseUrl}/product/findByProductId${id}`
+    return this.http.get<Product>(url);
+  }
+
   findFilter(msg: String):Observable<Product[]>{
     const url = this.baseUrl + "/product/findFilter"
     return this.http.get<Product[]>(url);

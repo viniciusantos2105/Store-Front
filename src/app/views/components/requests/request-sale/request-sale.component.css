@@ -1,0 +1,43 @@
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bar{
+    width: 100%;
+    display: inline;
+}
+
+.box{
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.one{
+    width: 49%;
+}
+
+.two{
+    width: 49%;
+}
+
+button{
+    width: 20%;
+    margin-right: 1rem;
+}
+
+mat-card{
+    margin-right: 1rem;
+    margin-left: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.white{
+    color: white;
+}

@@ -8,5 +8,5 @@ export interface Request {
     price: number;
     client: Client;
     product: Product;
-    addres: Address;
+    address: Address;
 }

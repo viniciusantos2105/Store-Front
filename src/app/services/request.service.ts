@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Request } from '../models/request';
 import { RequestDTO } from '../models/requestDTO';
 
 @Injectable({
@@ -27,4 +28,10 @@ export class RequestService {
     const url = this.baseUrl + "/requests/sale"
     return this.http.post<Request>(url, requestDTO);
   }
+
+  clientRequests():Observable<Request[]>{
+    const url = this.baseUrl + "/requests/findClientPurchases"
+    return this.http.get<Request[]>(url);
+  }
+
 }

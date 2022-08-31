@@ -1,0 +1,60 @@
+.bar{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.mat-elevation-z8{
+    width: 80%;
+    height: 50%;
+    margin: auto auto auto auto;
+}
+
+.container{
+    width: 80%;
+    margin: auto auto auto auto;
+}
+
+.box {
+   text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+.inital{
+   margin-right: 1rem;
+}
+
+.center {
+   margin-right: 1rem;
+}
+
+.meio{
+    width: 5%;
+    margin-top: 1rem;
+    margin-left: 10%;
+}
+
+[data-tooltip] {
+    position: relative;
+  }
+  
+  [data-tooltip]:after {
+    display: none;
+    position: absolute;
+    top: -5px;
+    padding: 5px;
+    border-radius: 3px;
+    left: calc(100% + 2px);
+    content: attr(data-tooltip);
+    white-space: nowrap;
+    background-color: #0095ff;
+    color: White;
+  }
+  
+  [data-tooltip]:hover:after {
+    display: block;
+  }

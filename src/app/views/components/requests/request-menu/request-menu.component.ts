@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -21,7 +22,8 @@ export class RequestMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor(private service: ProductService) { }
+  constructor(private service: ProductService,
+    private router: Router) { }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -34,5 +36,7 @@ export class RequestMenuComponent implements OnInit {
     })
   }
 
-
+  navigatePurchase(){
+    this.router.navigate(['request/purchases'])
+  }
 }

@@ -45,4 +45,8 @@ export class ClientLogadoComponent implements OnInit {
   navigateRequest(): void{
     this.router.navigate(['request'])
   }
+
+  navigatePurchase(){
+    this.router.navigate(['request/purchases'])
+  }
 }

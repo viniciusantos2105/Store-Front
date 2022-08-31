@@ -46,6 +46,7 @@ import { OperatorDeleteComponent } from './views/components/operator/operator-de
 import { ClientLogadoComponent } from './views/components/client/client-logado/client-logado.component';
 import { RequestMenuComponent } from './views/components/requests/request-menu/request-menu.component';
 import { RequestSaleComponent } from './views/components/requests/request-sale/request-sale.component';
+import { RequestsClientComponent } from './views/components/requests/requests-client/requests-client.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { RequestSaleComponent } from './views/components/requests/request-sale/r
     OperatorDeleteComponent,
     ClientLogadoComponent,
     RequestMenuComponent,
-    RequestSaleComponent
+    RequestSaleComponent,
+    RequestsClientComponent
   ],
   imports: [
     BrowserModule,

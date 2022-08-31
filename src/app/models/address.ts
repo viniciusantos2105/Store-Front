@@ -1,9 +1,9 @@
 export interface Address {
     id?: any,
     cep: string;
-    rua: String;
-    bairro: String;
-    cidade: String;
-    estado: String;
+    rua: string;
+    bairro: string;
+    cidade: string;
+    estado: string;
     number: string;
 }

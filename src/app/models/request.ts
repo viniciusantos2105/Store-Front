@@ -6,6 +6,7 @@ export interface Request {
     id?: any;
     quantidade: number;
     price: number;
+    time: string;
     client: Client;
     product: Product;
     address: Address;

@@ -118,7 +118,7 @@ const routes: Routes = [
   {
     path: 'request/purchases',
     component: RequestsClientComponent,
-
+    canActivate:[AuthGuardService]
   },
   {
     path: '**',

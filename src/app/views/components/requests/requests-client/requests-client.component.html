@@ -1,3 +1,6 @@
+<div class="box">
+  <button (click)="backNavigate()" mat-raised-button color="primary" class="center">Voltar</button>
+</div>
 <div class="mat-elevation-z8 container">
     <table mat-table [dataSource]="requests">
   
@@ -29,7 +32,11 @@
         <th mat-header-cell *matHeaderCellDef> Endereço </th>
         <td mat-cell *matCellDef="let element"> {{element.address.rua }} </td>
       </ng-container>
-    
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> <span data-tooltip="Data da compra"> Data </span> </th>
+        <td mat-cell *matCellDef="let element"> {{element.time.substring(0, [10]) }} </td>
+      </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

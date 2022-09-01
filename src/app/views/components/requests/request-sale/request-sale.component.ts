@@ -54,6 +54,11 @@ export class RequestSaleComponent implements OnInit {
   sale(): void{
     this.service.sale(this.requestDTO).subscribe(resposta =>{
       this.service.message('Compra realizada com sucesso')
+      this.router.navigate(['request'])
+    }, err =>{
+      if (err.error.error.match('Endereço não encontrado')) {
+        this.service.message(err.error.error)
+      }
     })
   }
 

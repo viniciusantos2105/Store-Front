@@ -47,6 +47,7 @@ import { ClientLogadoComponent } from './views/components/client/client-logado/c
 import { RequestMenuComponent } from './views/components/requests/request-menu/request-menu.component';
 import { RequestSaleComponent } from './views/components/requests/request-sale/request-sale.component';
 import { RequestsClientComponent } from './views/components/requests/requests-client/requests-client.component';
+import { RequestSpecificComponent } from './views/components/requests/request-specific/request-specific.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { RequestsClientComponent } from './views/components/requests/requests-cl
     ClientLogadoComponent,
     RequestMenuComponent,
     RequestSaleComponent,
-    RequestsClientComponent
+    RequestsClientComponent,
+    RequestSpecificComponent
   ],
   imports: [
     BrowserModule,

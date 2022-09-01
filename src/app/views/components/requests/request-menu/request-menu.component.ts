@@ -39,4 +39,8 @@ export class RequestMenuComponent implements OnInit {
   navigatePurchase(){
     this.router.navigate(['request/purchases'])
   }
+
+  navigateSpecificPurchase(){
+    this.router.navigate(['request/purchases/:id'])
+  }
 }

@@ -17,7 +17,7 @@ export class RequestsClientComponent implements OnInit {
   constructor(private service: RequestService,
     private router: Router) { }
 
-  displayedColumns: string[] = ['id', 'quantidade', 'price', 'product', 'address', 'time'];
+  displayedColumns: string[] = ['id', 'quantidade', 'price', 'product', 'address', 'time', 'action'];
   dataSource = new MatTableDataSource<Request>(this.requests);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -33,6 +33,10 @@ export class RequestsClientComponent implements OnInit {
 
   backNavigate(){
     this.router.navigate(['request'])
+  }
+
+  navigateSpecificPurchase(){
+    this.router.navigate(['request/purchases/:id'])
   }
 
   findPurchase():void{

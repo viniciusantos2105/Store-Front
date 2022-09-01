@@ -53,3 +53,17 @@ h1{
 .menu-login{
     background-color: white;
 }
+
+.center{
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.center:hover{
+    color: white;
+    background-color: black;
+}

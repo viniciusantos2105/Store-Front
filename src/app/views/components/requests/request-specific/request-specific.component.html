@@ -1,0 +1,48 @@
+<div class="box">
+    <mat-card class="two">
+        <h1>Produto</h1>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Numero da compra</mat-label>
+            <input [(ngModel)]="request.id" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar" >
+            <mat-label class="white">Quantidade do produto</mat-label>
+            <input [(ngModel)]="request.quantidade" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Preço do pedido</mat-label>
+            <input [(ngModel)]="request.price" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Data da compra</mat-label>
+            <input [(ngModel)]="date" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Hora da compra</mat-label>
+            <input [(ngModel)]="hour" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Nome do produto</mat-label>
+            <input [(ngModel)]="product.name" matInput disabled class="white">
+        </mat-form-field>
+        
+        <h1>Endereço</h1>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Cep</mat-label>
+            <input [(ngModel)]="address.cep" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="specific">Nome da rua</mat-label>
+            <input [(ngModel)]="address.rua" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Estado</mat-label>
+            <input [(ngModel)]="address.estado" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Numero</mat-label>
+            <input [(ngModel)]="address.number" matInput disabled class="white">
+        </mat-form-field>
+    </mat-card>
+</div>
+<button (click)="backNavigate()" mat-raised-button color="primary" class="inital">Voltar</button>

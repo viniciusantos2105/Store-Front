@@ -34,4 +34,8 @@ export class RequestService {
     return this.http.get<Request[]>(url);
   }
 
+  specificRequest(id: any):Observable<Request>{
+    const url = `${this.baseUrl}/requests/findByProductId${id}`
+    return this.http.get<Request>(url);
+  }
 }

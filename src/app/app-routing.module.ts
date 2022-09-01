@@ -21,6 +21,7 @@ import { ProductUpdateQuantityComponent } from './views/components/product/produ
 import { RegisterComponent } from './views/components/register/register.component';
 import { RequestMenuComponent } from './views/components/requests/request-menu/request-menu.component';
 import { RequestSaleComponent } from './views/components/requests/request-sale/request-sale.component';
+import { RequestSpecificComponent } from './views/components/requests/request-specific/request-specific.component';
 import { RequestsClientComponent } from './views/components/requests/requests-client/requests-client.component';
 
 const routes: Routes = [
@@ -118,6 +119,11 @@ const routes: Routes = [
   {
     path: 'request/purchases',
     component: RequestsClientComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path: 'request/purchases/specific/:id',
+    component: RequestSpecificComponent,
     canActivate:[AuthGuardService]
   },
   {

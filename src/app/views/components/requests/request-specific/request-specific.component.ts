@@ -83,8 +83,8 @@ export class RequestSpecificComponent implements OnInit {
     this.service.specificRequest(this.id_tec).subscribe(resposta =>{
       this.request = resposta;
       this.address = resposta.address
-      this.hour = resposta.time.substring(0, 10)
-      this.date = resposta.time.substring(10, 16)
+      this.date = resposta.time.substring(0, 10)
+      this.hour = resposta.time.substring(10, 16)
       this.product = resposta.product
     })
   }

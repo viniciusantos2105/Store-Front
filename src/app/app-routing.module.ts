@@ -14,8 +14,13 @@ import { OperatorMenuComponent } from './views/components/operator/operator-menu
 import { OperatorUpdateResponsibilityComponent } from './views/components/operator/operator-update-responsibility/operator-update-responsibility.component';
 import { ProductAllComponent } from './views/components/product/product-all/product-all.component';
 import { ProductCreateComponent } from './views/components/product/product-create/product-create.component';
-import { ProductFindFilterComponent } from './views/components/product/product-find-filter/product-find-filter.component';
+import { ProductHandbagsComponent } from './views/components/product/product-handbags/product-handbags.component';
 import { ProductMenuComponent } from './views/components/product/product-menu/product-menu.component';
+import { ProductPantsComponent } from './views/components/product/product-pants/product-pants.component';
+import { ProductShirtComponent } from './views/components/product/product-shirt/product-shirt.component';
+import { ProductShortsComponent } from './views/components/product/product-shorts/product-shorts.component';
+import { ProductSkirtComponent } from './views/components/product/product-skirt/product-skirt.component';
+import { ProductSneakersComponent } from './views/components/product/product-sneakers/product-sneakers.component';
 import { ProductUpdatePriceComponent } from './views/components/product/product-update-price/product-update-price.component';
 import { ProductUpdateQuantityComponent } from './views/components/product/product-update-quantity/product-update-quantity.component';
 import { RegisterComponent } from './views/components/register/register.component';
@@ -34,8 +39,28 @@ const routes: Routes = [
     component: ProductAllComponent
   },
   {
-    path: 'shirts',
-    component: ProductFindFilterComponent
+    path: 'products/shirts',
+    component: ProductShirtComponent
+  },
+  {
+    path: 'products/handbags',
+    component: ProductHandbagsComponent
+  },
+  {
+    path: 'products/skirts',
+    component: ProductSkirtComponent
+  },
+  {
+    path: 'products/pants',
+    component: ProductPantsComponent
+  },
+  {
+    path: 'products/shorts',
+    component: ProductShortsComponent
+  },
+  {
+    path: 'products/sneakers',
+    component: ProductSneakersComponent
   },
   {
     path: 'register',

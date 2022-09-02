@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Product } from '../models/product';
+import { ProductDTO } from '../models/productDTO';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -39,9 +40,9 @@ export class ProductService {
     return this.http.get<Product>(url);
   }
 
-  findFilter(msg: String):Observable<Product[]>{
+  findFilter(filter: ProductDTO):Observable<Product[]>{
     const url = this.baseUrl + "/product/findFilter"
-    return this.http.get<Product[]>(url);
+    return this.http.post<Product[]>(url, filter);
   }
 
   create(product: Product):Observable<Product>{

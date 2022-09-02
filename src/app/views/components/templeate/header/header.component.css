@@ -54,7 +54,7 @@ h1{
     background-color: white;
 }
 
-.center{
+.logout{
     color: white;
     text-align: center;
     border-radius: 3px;
@@ -63,7 +63,7 @@ h1{
 }
 
 
-.center:hover{
+.logout:hover{
     color: white;
-    background-color: black;
+    background-color: rgb(207, 5, 5);
 }

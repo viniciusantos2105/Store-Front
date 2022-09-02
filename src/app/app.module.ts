@@ -25,7 +25,6 @@ import { NavComponent } from './views/components/templeate/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { ProductAllComponent } from './views/components/product/product-all/product-all.component';
-import { ProductFindFilterComponent } from './views/components/product/product-find-filter/product-find-filter.component';
 import { OperatorCreateComponent } from './views/components/operator/operator-create/operator-create.component';
 import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 import { RegisterComponent } from './views/components/register/register.component';
@@ -48,6 +47,12 @@ import { RequestMenuComponent } from './views/components/requests/request-menu/r
 import { RequestSaleComponent } from './views/components/requests/request-sale/request-sale.component';
 import { RequestsClientComponent } from './views/components/requests/requests-client/requests-client.component';
 import { RequestSpecificComponent } from './views/components/requests/request-specific/request-specific.component';
+import { ProductShirtComponent } from './views/components/product/product-shirt/product-shirt.component';
+import { ProductPantsComponent } from './views/components/product/product-pants/product-pants.component';
+import { ProductShortsComponent } from './views/components/product/product-shorts/product-shorts.component';
+import { ProductSneakersComponent } from './views/components/product/product-sneakers/product-sneakers.component';
+import { ProductHandbagsComponent } from './views/components/product/product-handbags/product-handbags.component';
+import { ProductSkirtComponent } from './views/components/product/product-skirt/product-skirt.component';
 
 
 @NgModule({
@@ -58,7 +63,6 @@ import { RequestSpecificComponent } from './views/components/requests/request-sp
     NavComponent,
     HomeComponent,
     ProductAllComponent,
-    ProductFindFilterComponent,
     OperatorCreateComponent,
     ClientCreateComponent,
     RegisterComponent,
@@ -77,7 +81,13 @@ import { RequestSpecificComponent } from './views/components/requests/request-sp
     RequestMenuComponent,
     RequestSaleComponent,
     RequestsClientComponent,
-    RequestSpecificComponent
+    RequestSpecificComponent,
+    ProductShirtComponent,
+    ProductPantsComponent,
+    ProductShortsComponent,
+    ProductSneakersComponent,
+    ProductHandbagsComponent,
+    ProductSkirtComponent
   ],
   imports: [
     BrowserModule,

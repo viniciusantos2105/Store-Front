@@ -6,32 +6,32 @@ import { ProductDTO } from 'src/app/models/productDTO';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
-  selector: 'app-product-all',
-  templateUrl: './product-all.component.html',
-  styleUrls: ['./product-all.component.css']
+  selector: 'app-product-shirt',
+  templateUrl: './product-shirt.component.html',
+  styleUrls: ['./product-shirt.component.css']
 })
-export class ProductAllComponent implements AfterViewInit {
+export class ProductShirtComponent implements AfterViewInit {
 
   products: Product[] = [];
 
   filter: ProductDTO = {
     id: '',
-    name: '',
+    name: 'Camisa',
     quantity: '',
     price: ''
+  }
+
+  constructor(private service: ProductService) { }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.findFilter();
   }
 
   displayedColumns: string[] = ['id', 'name', 'quantity', 'price'];
   dataSource = new MatTableDataSource<Product>(this.products);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-
-  constructor(private service: ProductService) { }
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.findAll();
-  }
 
   findAll(): void {
     this.service.findAll().subscribe((resposta) => {
@@ -40,9 +40,8 @@ export class ProductAllComponent implements AfterViewInit {
   }
 
   findFilter():void{
-    this.service.findFilter(this.filter).subscribe(resposta =>{
+    this.service.findFilter(this.filter).subscribe((resposta) =>{
       this.products = resposta
     })
   }
-
 }

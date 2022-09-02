@@ -6,19 +6,26 @@ import { ProductDTO } from 'src/app/models/productDTO';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
-  selector: 'app-product-all',
-  templateUrl: './product-all.component.html',
-  styleUrls: ['./product-all.component.css']
+  selector: 'app-product-pants',
+  templateUrl: './product-pants.component.html',
+  styleUrls: ['./product-pants.component.css']
 })
-export class ProductAllComponent implements AfterViewInit {
+export class ProductPantsComponent implements AfterViewInit {
 
   products: Product[] = [];
 
   filter: ProductDTO = {
     id: '',
-    name: '',
+    name: 'Calça',
     quantity: '',
     price: ''
+  }
+
+  constructor(private service: ProductService) { }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.findFilter();
   }
 
   displayedColumns: string[] = ['id', 'name', 'quantity', 'price'];
@@ -26,22 +33,12 @@ export class ProductAllComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private service: ProductService) { }
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.findAll();
-  }
-
-  findAll(): void {
-    this.service.findAll().subscribe((resposta) => {
-      this.products = resposta;
-    })
-  }
-
   findFilter():void{
-    this.service.findFilter(this.filter).subscribe(resposta =>{
+    this.service.findFilter(this.filter).subscribe((resposta) =>{
       this.products = resposta
+      if(this.products.length == 0){
+        this.service.message('Não existem produtos com essa descrição')
+      }
     })
   }
 

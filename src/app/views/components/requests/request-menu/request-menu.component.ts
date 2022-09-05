@@ -26,21 +26,18 @@ export class RequestMenuComponent implements OnInit {
     private router: Router) { }
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
     this.findAll();
   }
 
   findAll(): void {
     this.service.findAll().subscribe((resposta) => {
       this.products = resposta;
+      this.dataSource = new MatTableDataSource<Product>(this.products);
+      this.dataSource.paginator = this.paginator;
     })
   }
 
   navigatePurchase(){
     this.router.navigate(['request/purchases'])
-  }
-
-  navigateSpecificPurchase(){
-    this.router.navigate(['request/purchases/:id'])
   }
 }

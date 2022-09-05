@@ -3,7 +3,7 @@
     <button (click)="navigateRequest()" mat-raised-button color="primary" class="center">Compras</button>
 </div>
 <mat-card class="mat-elevation-z8">
-    <div>
+    <div>   
         <div class="container">
             <h4>
                 ID:<input [(ngModel)]="client.id" disabled>
@@ -13,5 +13,54 @@
             </h4>
         </div>
     </div>
+</mat-card>
+
+<mat-card class="mat-elevation-z8">
+    <mat-card-header>
+        <mat-card-title class="title">Novidades</mat-card-title>
+        <div class="slider">
+            <div class="slides">
+
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+
+                <div class="slide first">
+                    <img src="https://lojadogu.vteximg.com.br/arquivos/ids/157486-400-400/Jaqueta-Veludo-Bege.png?v=637594432805930000" alt="imagem1">
+                </div>    
+                <div class="slide">
+                    <img src="https://bulking.vteximg.com.br/arquivos/ids/171545-400-400/CAMISETA_FRENTE--1-.jpg?v=637927558077870000" alt="imagem2">
+                </div>    
+                <div class="slide">
+                    <img src="https://65474.cdn.simplo7.net/static/65474/sku/thumb_roupas-camisas-camisa-preta-manga-curta-1620240728660.PNG" alt="imagem3">
+                </div>    
+                <div class="slide">    
+                    <img src="https://emfantasy.com.br/image/cache/data/Produtos/VE/Vestido-Fantasia-Adulto-Anos-60-PINK-15AB8A30-1-400x400.jpg.webp" alt="imagem4">
+                </div>    
+                <div class="slide">    
+                    <img src="https://images-americanas.b2w.io/produtos/01/00/sku/31771/0/31771065_1GG.jpg" alt="imagem5">
+                </div>
+                
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                </div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+        
+        </div>
+    </mat-card-header>
 </mat-card>
 

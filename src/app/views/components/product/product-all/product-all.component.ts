@@ -29,19 +29,22 @@ export class ProductAllComponent implements AfterViewInit {
   constructor(private service: ProductService) { }
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
     this.findAll();
   }
 
   findAll(): void {
     this.service.findAll().subscribe((resposta) => {
       this.products = resposta;
+      this.dataSource = new MatTableDataSource<Product>(this.products);
+      this.dataSource.paginator = this.paginator;
     })
   }
 
   findFilter():void{
     this.service.findFilter(this.filter).subscribe(resposta =>{
-      this.products = resposta
+      this.products = resposta;
+      this.dataSource = new MatTableDataSource<Product>(this.products);
+      this.dataSource.paginator = this.paginator;
     })
   }
 

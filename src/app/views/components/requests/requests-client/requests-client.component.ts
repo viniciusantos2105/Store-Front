@@ -27,7 +27,6 @@ export class RequestsClientComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
     this.findPurchase();
   }
 
@@ -42,6 +41,8 @@ export class RequestsClientComponent implements OnInit {
   findPurchase():void{
     this.service.clientRequests().subscribe(resposta =>{
       this.requests = resposta;
+      this.dataSource = new MatTableDataSource<Request>(this.requests);
+      this.dataSource.paginator = this.paginator;
     })
   }
 }

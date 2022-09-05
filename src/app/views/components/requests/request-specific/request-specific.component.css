@@ -25,6 +25,10 @@
     margin-right: auto;
 }
 
+.center{
+    text-align: center;
+}
+
 h1{
     margin-left: 1rem;
 }

@@ -24,7 +24,6 @@ export class ProductHandbagsComponent implements AfterViewInit {
   constructor(private service: ProductService) { }
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
     this.findFilter();
   }
 
@@ -35,7 +34,9 @@ export class ProductHandbagsComponent implements AfterViewInit {
 
   findFilter():void{
     this.service.findFilter(this.filter).subscribe((resposta) =>{
-      this.products = resposta
+      this.products = resposta;
+      this.dataSource = new MatTableDataSource<Product>(this.products);
+      this.dataSource.paginator = this.paginator;
       if(this.products.length == 0){
         this.service.message('Não existem produtos com essa descrição')
       }

@@ -42,6 +42,7 @@ export class ClientLogadoComponent implements OnInit {
     })
   }
 
+
   navigateRequest(): void{
     this.router.navigate(['request'])
   }

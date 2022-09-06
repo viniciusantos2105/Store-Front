@@ -2,6 +2,23 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 1rem;
+    border: 1px black solid;
+    background-color:  #E3E3E3;
+}
+
+
+button{
+    margin-left: 1%;
+    border: 1px solid white;
+}
+
+.create.create:disabled{
+    color: gray;
+}
+
+.create.create:enabled{
+    border: 1px black solid;
 }
 
 .bar{
@@ -9,10 +26,38 @@
     display: inline;
 }
 
-button{
-    margin-left: 1%;
+mat-label{
+    color: black;
 }
 
 h1{
     text-align: center;
+}
+
+mat-option{
+    background-color: black;
+}
+
+.create.create:disabled{
+    color: gray;
+}
+
+.create.create:enabled{
+    border: 1px black solid;
+}
+
+input{
+    color: black;
+}
+
+input::placeholder{
+    color: gray
+}
+
+mat-select.mat-color::selection{
+    color: black;
+}
+
+mat-option:has(value="ADMIN"){
+    color: black;
 }

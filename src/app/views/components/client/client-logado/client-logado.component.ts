@@ -42,6 +42,12 @@ export class ClientLogadoComponent implements OnInit {
     })
   }
 
+  getClientPost(): void{
+    this.service.getClient(`${this.auth.getUsername()}`).subscribe(resposta =>{
+      this.client = resposta
+    })
+  }
+
 
   navigateRequest(): void{
     this.router.navigate(['request'])

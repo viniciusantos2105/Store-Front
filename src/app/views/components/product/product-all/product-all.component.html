@@ -1,7 +1,7 @@
 <div class="mat-elevation-z8 container">
   <mat-form-field class="example-form-field" appearance="fill">
     <mat-label>Pesquisa</mat-label>
-    <input matInput type="text" [(ngModel)]="filter.name">
+    <input matInput type="text" [(ngModel)]="filter.name" placeholder="Digite o nome do produto" class="placeholder" value="Digite o nome">
     <button *ngIf="filter.name" matSuffix mat-icon-button aria-label="Clear" (click)="findFilter()">
       <mat-icon>search</mat-icon>
     </button>
@@ -39,7 +39,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   
-    <mat-paginator [pageSizeOptions]="[1, 5, 10, 20]"
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
                    showFirstLastButtons 
                    aria-label="Select page of periodic elements">
     </mat-paginator>

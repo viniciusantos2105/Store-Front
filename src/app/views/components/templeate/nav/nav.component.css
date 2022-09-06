@@ -1,6 +1,29 @@
 .container{
     height:  83%;
     width: 100%;
+    background-color: white;
+}
+
+.mat-list-item{
+    color: black;
+}
+
+a{
+    background-color: #E3E3E3;
+}
+
+mat-nav-list{
+    margin-top: -8px;
+    background-color: white;
+}
+
+mat-drawer{
+    background-color: #E3E3E3;
+    text-decoration-color: black;
+}
+
+mat-icon{
+    color: black;
 }
 
 i{

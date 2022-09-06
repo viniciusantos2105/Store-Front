@@ -2,6 +2,8 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 1rem;
+    border: #E3E3E3 solid;
 }
 
 .search{
@@ -13,8 +15,19 @@
     width: 97%;
 }
 
+th{
+    border-radius: 12px 12px 0 0;
+}
+
+mat-paginator{
+    border-radius: 0 0 12px 12px;
+    background-color: #212121;
+}
+
 table {
     width: 100%;
+    border-radius: 1rem;
+    background-color: #212121;
 }
 
 mat-form-field {

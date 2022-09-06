@@ -30,6 +30,10 @@ export class ClientService {
         return this.http.get<Client>(url);
     }
 
+    getClientPost(username: string): Observable<Client>{
+        const url = this.baseUrl + "/client/getClientPost";
+        return this.http.post<Client>(url, username)
+    }
 
     token(login: Login): Observable<JwtToken>{
         this.http = new HttpClient(this.httpBack)

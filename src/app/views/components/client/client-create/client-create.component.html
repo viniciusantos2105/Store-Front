@@ -1,5 +1,8 @@
 <h1>Cadastro cliente</h1>
-<div class="container">
+
+<div class="box">
+    <img src="https://img.freepik.com/vetores-premium/ilustracao-do-programa-junte-se-a-nos-para-recrutamento-de-funcionarios-em-novas-condicoes-normais-e-pandemicas-anuncios-de-contratacao-de-trabalhadores-o-design-pode-ser-usado-para-landing-page-site-aplicativo-movel-cartaz-panfletos-banner_4968-1193.jpg?w=2000" alt="">
+    <div class="container">
 
     <mat-form-field appearance="fill" class="bar">
         <mat-label>Username</mat-label>
@@ -42,6 +45,8 @@
         </mat-form-field>
     </div>
     <button (click)="create()" [disabled]="errorValidNumber() || errorValidCep() || errorValidPassword() || errorValidEmail() || errorValidCpf() || 
-    errorValidName() || errorValidUsername()" mat-stroked-button color="accent" class="end">Criar cliente</button>
+    errorValidName() || errorValidUsername()" mat-stroked-button color="accent" class="create">Criar cliente</button>
     <button (click)="cancel()" mat-stroked-button color="warn" class="end">Cancelar</button>
+    <p></p>
+</div>
 </div>

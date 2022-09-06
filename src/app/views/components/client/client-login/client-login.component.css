@@ -1,27 +1,64 @@
 .container{
     width: 40%;
+    text-align: right;
+    margin-top: -45px;
+    margin-right: 0rem;
     margin-left: auto;
-    margin-right: auto;
+    margin-bottom: -164px;
+    background-color:  #E3E3E3;
+}
+
+.box{
+    display: flex;
 }
 
 .bar{
-    width: 100%;
+    width: 60%;
     display: inline;
+    margin-right: 9rem;
+    background-color: black;
 }
 
 .end{
     margin-top: 1rem;
-    width: 100%;
+    width: 60%;
     display: inline;
+    margin-right: 9rem;
 }
 
 h1{
+    color: black;
     text-align: center;
 }
 
 h3{
-    cursor: pointer;
-    color: #0395d3;
-    text-decoration: underline;
+    margin-top: -15px;
+    color: black;
     text-align: center;
+}
+
+mat-label{
+    color: black;
+}
+
+input::placeholder{
+    color: gray;
+}
+
+input{
+    color: black;
+}
+
+.back{
+    width: 50%;
+    display: inline;
+    background-color: black;
+}
+
+.twobox{
+    margin-top: 8rem;
+}
+
+img{
+    margin-left: 15rem;
 }

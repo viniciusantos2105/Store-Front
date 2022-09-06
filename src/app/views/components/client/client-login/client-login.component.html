@@ -1,13 +1,21 @@
-<div class="container">
-    <h1>Login cliente</h1>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Username</mat-label>
-        <input [(ngModel)]="login.username" matInput placeholder="Ex. usuario001">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Senha</mat-label>
-        <input [(ngModel)]="login.password" matInput placeholder="Ex. password123">
-    </mat-form-field>
-    <button (click)="logar()" mat-raised-button color="primary" class="bar">Entrar</button>
-    <button (click)="registerNavigate()" mat-raised-button color="accent" class="end">Cadastra-se</button>
+<div class="box">
+    <img src="https://st2.depositphotos.com/1001599/43046/v/600/depositphotos_430460192-stock-illustration-sign-in-page-abstract-concept.jpg" alt="">
+    <div class="container">
+       <div class="twobox">
+            <h1>Bem vindo!</h1>
+            <h3>Faça login com sua conta</h3>
+            <br>
+            <mat-form-field appearance="fill" class="back">
+                <mat-label>Username</mat-label>
+                <input [(ngModel)]="login.username" matInput placeholder="Ex. usuario001">
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="back">
+                <mat-label>Senha</mat-label>
+                <input [(ngModel)]="login.password" matInput placeholder="Ex. password123">
+            </mat-form-field>
+            <button (click)="logar()" mat-raised-button color="primary" class="bar">Entrar</button>
+            <button (click)="registerNavigate()" mat-raised-button color="accent" class="end">Cadastra-se</button>
+            <p></p>
+       </div>
+    </div>
 </div>

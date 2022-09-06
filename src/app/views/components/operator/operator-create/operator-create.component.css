@@ -1,5 +1,6 @@
 .container{
-    width: 80%;
+    width: 50%;
+    height: 40%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 1rem;
@@ -26,11 +27,16 @@ button{
     display: inline;
 }
 
+.box{
+    display: flex;
+}
+
 mat-label{
     color: black;
 }
 
 h1{
+    color: black;
     text-align: center;
 }
 
@@ -58,6 +64,7 @@ mat-select.mat-color::selection{
     color: black;
 }
 
-mat-option:has(value="ADMIN"){
-    color: black;
+img{
+    height: 40%;
+    width: 40%;
 }

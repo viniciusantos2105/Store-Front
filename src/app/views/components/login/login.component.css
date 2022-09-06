@@ -7,8 +7,10 @@
 .bar{
     width: 49%;
     margin-left: 1%;
+    background-color: black;
 }
 
 h1{
+    color: black;
     text-align: center;
 }

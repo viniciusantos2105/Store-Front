@@ -49,10 +49,19 @@ input{
     color: black;
 }
 
-.back{
-    width: 50%;
-    display: inline;
-    background-color: black;
+.user{
+    width: 57%;
+    align-items: center;
+    margin-right: 10rem;
+    color: white;
+    
+}
+
+.pass{
+    width: 57%;
+    align-items: center;
+    margin-right: 10rem;
+    color: white;
 }
 
 .twobox{

@@ -1,22 +1,47 @@
 .container{
     width: 40%;
+    text-align: right;
+    margin-top: -45px;
+    margin-right: 0rem;
     margin-left: auto;
-    margin-right: auto;
-    border-radius: 1rem;
-    border: 1px black solid;
+    margin-bottom: -164px;
     background-color:  #E3E3E3;
 }
 
-.bar{
-    width: 100%;
-    display: inline;
-    background-color: black;
+.box{
+    display: flex;
 }
 
+.twobox{
+    margin-top: 8rem;
+}
+
+.bar{
+    width: 60%;
+    display: inline;
+    margin-right: 9rem;
+    background-color: black;
+}
 .end{
     margin-top: 1rem;
-    width: 100%;
+    width: 60%;
     display: inline;
+    margin-right: 9rem;
+}
+
+.user{
+    width: 57%;
+    align-items: center;
+    margin-right: 10rem;
+    color: white;
+    
+}
+
+.pass{
+    width: 57%;
+    align-items: center;
+    margin-right: 10rem;
+    color: white;
 }
 
 h1{
@@ -25,9 +50,8 @@ h1{
 }
 
 h3{
-    cursor: pointer;
-    color: #0395d3;
-    text-decoration: underline;
+    margin-top: -15px;
+    color: black;
     text-align: center;
 }
 
@@ -37,4 +61,12 @@ mat-label{
 
 input::placeholder{
     color: gray;
+}
+
+input{
+    color: black;
+}
+
+img{
+    margin-left: 15rem;
 }

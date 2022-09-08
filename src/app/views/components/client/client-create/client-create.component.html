@@ -1,52 +1,62 @@
-<h1>Cadastro cliente</h1>
-
 <div class="box">
-    <img src="https://img.freepik.com/vetores-premium/ilustracao-do-programa-junte-se-a-nos-para-recrutamento-de-funcionarios-em-novas-condicoes-normais-e-pandemicas-anuncios-de-contratacao-de-trabalhadores-o-design-pode-ser-usado-para-landing-page-site-aplicativo-movel-cartaz-panfletos-banner_4968-1193.jpg?w=2000" alt="">
     <div class="container">
-
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Username</mat-label>
-        <input [(ngModel)]="client.username" [formControl]="username" required username="username" matInput placeholder="Ex. usuario001">
-        <mat-error *ngIf="username.invalid">{{ errorValidUsername() }}</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Nome</mat-label>
-        <input [(ngModel)]="client.name" [formControl]="name" required name="name" matInput placeholder="Ex. nome segundoNome">
-        <mat-error *ngIf="name.invalid">{{ errorValidName() }}</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>CPF</mat-label>
-        <input [(ngModel)]="client.cpf" [formControl]="cpf" required cpf="cpf" matInput placeholder="Ex. 000.000.000-00">
-        <mat-error *ngIf="cpf.invalid">{{ errorValidCpf() }}</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Email</mat-label>
-        <input [(ngModel)]="client.email" [formControl]="email" required email="email" matInput placeholder="Ex. email@email.com">
-        <mat-error *ngIf="email.invalid">{{ errorValidEmail() }}</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Senha</mat-label>
-        <input [(ngModel)]="client.password" [formControl]="password" required password="password" matInput placeholder="Ex. password123">
-        <mat-error *ngIf="password.invalid">{{ errorValidPassword() }}</mat-error>
-    </mat-form-field>
-    <div>
-        <h2>
-            Endereço
-        </h2>
-        <mat-form-field appearance="fill" class="bar">
-            <mat-label>Cep</mat-label>
-            <input [(ngModel)]="client.address.cep" [formControl]="cep" required cep="cep" matInput placeholder="Ex. 00000-000">
-            <mat-error *ngIf="cep.invalid">{{ errorValidCep() }}</mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="bar">
-            <mat-label>Numero</mat-label>
-            <input [(ngModel)]="client.address.number" [formControl]="number" required number="number" matInput placeholder="Ex. 00">
-            <mat-error *ngIf="number.invalid">{{ errorValidNumber() }}</mat-error>
-        </mat-form-field>
+        <div class="separetor">
+            <h1 class="welcome">Bem vindo de volta</h1>
+            <h3>Para se manter conectado conosco,<br> faça o login</h3>
+            <button (click)="loginNavigate()" mat-raised-button color="primary" class="log">Faça login</button>
+        </div>
+        <div class="secondseparetor">
+            <h2 class="center">Crie sua conta</h2>
+            <mat-form-field appearance="fill" class="bar">
+                <mat-label>Username</mat-label>
+                <input [(ngModel)]="client.username" [formControl]="username" required username="username" matInput placeholder="Ex. usuario001">
+                <mat-error *ngIf="username.invalid">{{ errorValidUsername() }}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="bar">
+                <mat-label>Nome</mat-label>
+                <input [(ngModel)]="client.name" [formControl]="name" required name="name" matInput placeholder="Ex. nome segundoNome">
+                <mat-error *ngIf="name.invalid">{{ errorValidName() }}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="bar">
+                <mat-label>CPF</mat-label>
+                <input [(ngModel)]="client.cpf" [formControl]="cpf" required cpf="cpf" matInput placeholder="Ex. 000.000.000-00">
+                <mat-error *ngIf="cpf.invalid">{{ errorValidCpf() }}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="bar">
+                <mat-label>Email</mat-label>
+                <input [(ngModel)]="client.email" [formControl]="email" required email="email" matInput placeholder="Ex. email@email.com">
+                <mat-error *ngIf="email.invalid">{{ errorValidEmail() }}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="bar">
+                <mat-label>Senha</mat-label>
+                <input [(ngModel)]="client.password" [formControl]="password" required password="password" matInput placeholder="Ex. password123">
+                <mat-error *ngIf="password.invalid">{{ errorValidPassword() }}</mat-error>
+            </mat-form-field>
+            <div>
+                <h2 class="center">
+                    Endereço
+                </h2>
+                <mat-form-field appearance="fill" class="bar">
+                    <mat-label>Cep</mat-label>
+                    <input [(ngModel)]="client.address.cep" [formControl]="cep" required cep="cep" matInput placeholder="Ex. 00000-000">
+                    <mat-error *ngIf="cep.invalid">{{ errorValidCep() }}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="bar">
+                    <mat-label>Numero</mat-label>
+                    <input [(ngModel)]="client.address.number" [formControl]="number" required number="number" matInput placeholder="Ex. 00">
+                    <mat-error *ngIf="number.invalid">{{ errorValidNumber() }}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="button">
+                <button (click)="create()" [disabled]="errorValidNumber() || errorValidCep() || errorValidPassword() || errorValidEmail() || errorValidCpf() || 
+                errorValidName() || errorValidUsername()" mat-stroked-button color="accent" class="create">Criar cliente</button>
+                <button (click)="cancel()" mat-stroked-button color="warn" class="end">Cancelar</button>
+                <p></p>
+            </div>
+        </div>
     </div>
-    <button (click)="create()" [disabled]="errorValidNumber() || errorValidCep() || errorValidPassword() || errorValidEmail() || errorValidCpf() || 
-    errorValidName() || errorValidUsername()" mat-stroked-button color="accent" class="create">Criar cliente</button>
-    <button (click)="cancel()" mat-stroked-button color="warn" class="end">Cancelar</button>
-    <p></p>
-</div>
 </div>

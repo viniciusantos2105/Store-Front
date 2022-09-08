@@ -1,14 +1,21 @@
-<div class="container">
-    <h1>Login operador</h1>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Username</mat-label>
-        <input [(ngModel)]="login.username" matInput placeholder="Ex. usuario001">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="bar">
-        <mat-label>Senha</mat-label>
-        <input [(ngModel)]="login.password" matInput placeholder="Ex. password123" type="password">
-    </mat-form-field>
-    <button (click)="logar()" mat-raised-button color="primary" class="bar">Entrar</button>
-    <button (click)="registerNavigate()" mat-raised-button color="accent" class="end">Cadastra-se</button>
-    <p></p>
+<div class="box">
+    <img src="https://st4.depositphotos.com/1001599/41414/v/600/depositphotos_414141898-stock-illustration-dating-site-vector-concept-metaphor.jpg" alt="">
+    <div class="container">
+        <div class="twobox">
+            <h1>Bem vindo, operador</h1>
+            <h3>Efetue seu login</h3>
+            <mat-form-field appearance="fill" class="user">
+                <mat-label>Username</mat-label>
+                <input [(ngModel)]="login.username" matInput placeholder="Ex. usuario001">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="pass">
+                <mat-label>Senha</mat-label>
+                <input [(ngModel)]="login.password" matInput placeholder="Ex. password123" type="password">
+            </mat-form-field>
+            <button (click)="logar()" mat-raised-button color="primary" class="bar">Entrar</button>
+            <button (click)="registerNavigate()" mat-raised-button color="accent" class="end">Cadastra-se</button>
+            <p></p>
+        </div>
+    </div>
 </div>

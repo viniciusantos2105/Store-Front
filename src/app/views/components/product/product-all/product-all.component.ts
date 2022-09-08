@@ -45,6 +45,9 @@ export class ProductAllComponent implements AfterViewInit {
       this.products = resposta;
       this.dataSource = new MatTableDataSource<Product>(this.products);
       this.dataSource.paginator = this.paginator;
+      if(this.products.length == 0){
+        this.service.message('Não existem produtos com essa descrição')
+      }
     })
   }
 

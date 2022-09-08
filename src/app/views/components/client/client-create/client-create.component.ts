@@ -47,6 +47,10 @@ export class ClientCreateComponent implements OnInit {
     this.router.navigate(['register'])
   }
 
+  loginNavigate():void{
+    this.router.navigate(['client/login'])
+  }
+
   create(): void {
     this.service.create(this.client).subscribe((resposta) => {
       this.router.navigate(['client/login'])

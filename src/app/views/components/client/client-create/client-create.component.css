@@ -1,10 +1,11 @@
 .container{
-    width: 40%;
+    width: 50%;
+    height: 30%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 1rem;
-    border: 1px black solid;
     background-color:  #E3E3E3;
+    display: flex;
 }
 
 .box{
@@ -12,22 +13,10 @@
 }
 
 .bar{
-    width: 100%;
-    display: inline;
-}
-
-mat-form-field{
-    background-color: white;
+    width: 57%;
+    align-items: center;
+    margin-left: 6rem;
     color: white;
-}
-
-mat-label{
-    color: black;
-}
-
-button{
-    margin-left: 1%;
-    border: 1px solid white;
 }
 
 .create.create:disabled{
@@ -42,15 +31,67 @@ button{
     border: 1px solid white;
 }
 
-h1{
-    text-align: right;
-    margin-right: 30rem;
+.separetor{
+    width: 50%;
+    border-radius: 1rem 0 0 1rem;
+    background-color: black;
+}
+
+.secondseparetor{
+    width: 50%;
+}
+
+.center{
+    text-align: center;
+}
+.welcome{
+    margin-top: 40%;
+    text-align: center;
+    color: white;
+}
+
+.button{
+    margin-left: 8rem;
+}
+
+.log{
+    width: 40%;
+    color: white;
+    margin-left: 9rem;
+    border: 1px solid #E3E3E3;
+    background-color: black;
+    transition: 1s;
+}
+
+.log:hover{
     color: black;
+    background-color: white;
+}
+
+mat-icon{
+    color: black;
+}
+
+mat-form-field{
+    color: white;
+}
+
+mat-label{
+    color: black;
+}
+
+button{
+    margin-left: 1%;
+    border: 1px solid white;
 }
 
 h2{
     margin-left: 2px;
     color: black;
+}
+
+h3{
+    text-align: center;
 }
 
 img{

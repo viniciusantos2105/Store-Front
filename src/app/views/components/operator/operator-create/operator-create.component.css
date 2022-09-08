@@ -3,8 +3,6 @@
     height: 40%;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 1rem;
-    border: 1px black solid;
     background-color:  #E3E3E3;
 }
 
@@ -28,7 +26,12 @@ button{
 }
 
 .box{
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 70%;
+    align-items: center;
     display: flex;
+    box-shadow: 0 0 1em black;
 }
 
 mat-label{
@@ -58,10 +61,6 @@ input{
 
 input::placeholder{
     color: gray
-}
-
-mat-select.mat-color::selection{
-    color: black;
 }
 
 img{

@@ -2,13 +2,17 @@ mat-card{
     width: 80%;
     height: 50%;
     margin: 1rem auto auto auto;
+    display: flex;
+    background-color: #E3E3E3;
 }
 
 button{
+    height: 20%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     margin-top: 1rem;
+    background-color: black;
 }
 
 input{
@@ -18,12 +22,32 @@ input{
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    margin-top: 1rem;
     text-align: center;
 }
 
 h4{
+    margin-top: 10px;
+    margin-bottom: -5px;
+    color: black;
     text-align: center;
+}
+
+.box{
+    margin-left: 35%;
+    display: flex;
+    height: 20%;
+}
+
+.secondbox{
+    margin-left: -20%;
+    margin-top: 5%;
+    display: flex;
+    height: 50%;
+}
+
+.bar{
+    margin-left: 1rem;
+    background-color: black;
 }
 
 .end{

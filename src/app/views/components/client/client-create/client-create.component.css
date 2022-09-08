@@ -21,10 +21,13 @@
 
 .create.create:disabled{
     color: gray;
+    transition: 1s;
 }
 
 .create.create:enabled{
-    border: 1px black solid;
+    background-color: black;
+    transition: 1s;
+    border: 1px white solid;
 }
 
 .end{

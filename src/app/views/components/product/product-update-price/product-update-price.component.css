@@ -2,11 +2,33 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    background-color: #E3E3E3;
+    color: black;
 }
 
 .bar{
     width: 100%;
     display: inline;
+}
+
+.center{
+    background-color: black;
+    border: 1px solid white;
+    transition: 1s;
+}
+
+.center:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+input::placeholder{
+    color: gray;
+}
+
+mat-label{
+    color: black;
 }
 
 button{

@@ -1,21 +1,23 @@
 <mat-card class="mat-elevation-z8">
-    <button (click)="navigateOperatorMenu()" mat-raised-button color="primary" class="bar">Menu operador</button>
-    <button (click)="navigateProduct()" mat-raised-button color="primary" class="bar">Menu produtos</button>
-    <button mat-raised-button color="primary" class="bar">Menu pedidos</button> 
-</mat-card>
-<mat-card class="mat-elevation-z8">
-    <div>
+    <div class="box">
+        <button (click)="navigateOperatorMenu()" mat-raised-button color="primary" class="bar">Menu operador</button>
+        <button (click)="navigateProduct()" mat-raised-button color="primary" class="bar">Menu produtos</button>
+        <button mat-raised-button color="primary" class="bar">Menu pedidos</button> 
+    </div>
+    <div class="secondbox">
         <div class="container">
             <div class="linha">
                 <h4>ID:</h4>
                 <input [(ngModel)]="operatorAuthenticated.id" disabled>
             </div>
-            <h4>
-                USERNAME:<input [(ngModel)]="operatorAuthenticated.username" disabled>
-            </h4>
-            <h4>
-                CARGO:<input [(ngModel)]="operatorAuthenticated.responsibility" disabled>
-            </h4>
+            <div class="linha">
+                <h4>USERNAME:</h4>
+                <input [(ngModel)]="operatorAuthenticated.username" disabled>
+            </div>
+            <div class="linha">
+                <h4>CARGO:</h4>
+                <input [(ngModel)]="operatorAuthenticated.responsibility" disabled>
+            </div>
         </div>
     </div>
 </mat-card>

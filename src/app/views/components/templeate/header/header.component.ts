@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Operator } from 'src/app/models/operator';
 import { AuthService } from 'src/app/services/auth.service';
+import { OperatorService } from 'src/app/services/operator.service';
 
 @Component({
   selector: 'app-header',
@@ -9,18 +11,33 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
+  operator: Operator = {
+    id: '',
+    username: '',
+    password: '',
+    responsibility: ''
+  }
+
   constructor(public auth: AuthService,
-    private router: Router) { }
+    private router: Router,
+    private operatorService: OperatorService) { }
 
   ngOnInit(): void {
   }
 
+  logoff(){
+    if(this.auth.isAuthenticated()){
+      return false;
+    }
+    return true;
+  }
+
   authenticated(){
     if(this.auth.isAuthenticated()){
-      return false
+      return true;
     }
-    return true
-  }
+    return false;
+    }
 
   logout():void{
     localStorage.setItem('username', '')
@@ -29,6 +46,10 @@ export class HeaderComponent implements OnInit {
 
   navigateRequest(): void{
     this.router.navigate(['request'])
+  }
+
+  navigateOperator(): void{
+    this.router.navigate(['operator/logado'])
   }
 
   navigatePurchase(){

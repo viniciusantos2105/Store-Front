@@ -26,14 +26,54 @@ table {
 
 .inital{
    margin-right: 1rem;
+   background-color: black;
 }
 
 .center {
    margin-right: 1rem;
+   background-color: black;
+}
+
+.final{
+    background-color: black;
 }
 
 .meio{
     width: 5%;
     margin-top: 1rem;
-    margin-left: 10%;
+    margin-left: 5%;
+    background-color: black;
+}
+
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    border: #E3E3E3 solid;
+}
+
+.search{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+th{
+    border-radius: 12px 12px 0 0;
+}
+
+mat-paginator{
+    border-radius: 0 0 12px 12px;
+    background-color: #212121;
+}
+
+table {
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #212121;
+}
+
+mat-form-field {
+    width: 100%;
+    align-items: center;
 }

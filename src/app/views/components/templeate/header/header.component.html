@@ -8,11 +8,11 @@
     </button>
     
     <mat-menu #menu="matMenu" class="menu-login">
-        <button mat-menu-item class="login" routerLink="login" *ngIf="authenticated()">Entrar</button>
-        <button mat-menu-item class="register" routerLink="register" *ngIf="authenticated()">Cadastrar-se</button>
-        <button (click)="navigatePurchase()" mat-menu-item class="login" routerLink="login" *ngIf="!authenticated()">Suas compras</button>
-        <button (click)="navigateRequest()" mat-menu-item class="register" routerLink="register" *ngIf="!authenticated()">Compras</button>
-        <button (click)="logout()" mat-menu-item class="logout" routerLink="login" *ngIf="!authenticated()">Logout</button>
+        <button mat-menu-item class="login" routerLink="login" *ngIf="logoff()">Entrar</button>
+        <button mat-menu-item class="register" routerLink="register" *ngIf="logoff()">Cadastrar-se</button>
+        <button (click)="navigatePurchase()" mat-menu-item class="login" routerLink="login" *ngIf="authenticated()">Suas compras</button>
+        <button (click)="navigateRequest()" mat-menu-item class="register" routerLink="register" *ngIf="authenticated()">Compras</button>
+        <button (click)="logout()" mat-menu-item class="logout" routerLink="login" *ngIf="authenticated()">Logout</button>
     </mat-menu>
 
 </mat-toolbar>

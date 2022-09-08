@@ -49,10 +49,17 @@ mat-option{
 
 .create.create:disabled{
     color: gray;
+    transition: 1s;
 }
 
 .create.create:enabled{
-    border: 1px black solid;
+    transition: 1s;
+    background-color: black;
+    border: 1px white solid;
+}
+
+.cancel{
+    border: 1px white solid;
 }
 
 input{

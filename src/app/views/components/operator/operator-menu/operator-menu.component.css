@@ -9,6 +9,8 @@
     width: 80%;
     height: 50%;
     margin: auto auto auto auto;
+    border: #E3E3E3 solid;
+    border-radius: 1rem;
 }
 
 .container{
@@ -27,6 +29,25 @@ table {
 
 .inital{
    margin-right: 1rem;
+   background-color: black;
+   transition: 1s;
+}
+
+.inital:hover{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+.final{
+    background-color: black;
+    transition: 1s;
+ }
+ 
+.final:hover{
+     border: 1px solid black;
+     background-color: white;
+     color: black;
 }
 
 .center {
@@ -34,7 +55,30 @@ table {
 }
 
 .meio{
+    background-color: black;
+    transition: 1s;
     width: 5%;
     margin-top: 1rem;
     margin-left: 10%;
+}
+
+.meio:hover{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+th{
+    border-radius: 12px 12px 0 0;
+}
+
+mat-paginator{
+    border-radius: 0 0 12px 12px;
+    background-color: #212121;
+}
+
+table {
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #212121;
 }

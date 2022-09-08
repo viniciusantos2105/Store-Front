@@ -1,12 +1,33 @@
 .container{
-    width: 80%;
+    width: 30%;
+    height: 10%;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
+    background-color: #E3E3E3;
+    border-radius: 2px;
+    box-shadow:0 0 1em black;
 }
 
 .bar{
     width: 100%;
     display: inline;
+}
+
+.box{
+    display: flex;
+}
+
+mat-label{
+    color: black;
+}
+
+mat-option{
+    background-color: black;
+}
+
+input{
+    color: black;
 }
 
 button{
@@ -15,6 +36,22 @@ button{
 
 h1{
     text-align: center;
+    color: black;
+}
+
+.end:disabled{
+    border: 1px solid white;
+    color: gray;
+    transition: 1s;
+}
+
+.end:enabled{
+    transition: 1s;
+    background-color: black;
+}
+
+.cancel{
+    border: 1px solid white;
 }
 
 .meio{

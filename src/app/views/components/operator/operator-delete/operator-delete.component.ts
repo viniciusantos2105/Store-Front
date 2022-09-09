@@ -28,7 +28,7 @@ export class OperatorDeleteComponent implements OnInit {
   }
 
   dismiss(): void{
-    this.service.deleteOperator(this.id).subscribe(resposta => {
+    this.service.deleteOperator(this.operator.id).subscribe(resposta => {
       this.service.message('Operador demitido com sucesso')
     })
   }

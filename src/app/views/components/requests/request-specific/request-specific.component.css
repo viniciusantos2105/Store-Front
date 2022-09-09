@@ -39,20 +39,3 @@ button {
     width: 10%;
 }
 
-mat-paginator{
-    border-radius: 0 0 12px 12px;
-    background-color: #212121;
-}
-
-table {
-    width: 100%;
-}
-
-mat-label{
-    color: black;
-}
-
-table {
-    width: 100%;
-    background-color: #212121;
-}

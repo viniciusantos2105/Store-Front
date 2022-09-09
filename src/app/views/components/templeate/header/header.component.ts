@@ -25,13 +25,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  logoff(){
-    if(this.auth.isAuthenticated()){
-      return false;
-    }
-    return true;
-  }
-
   authenticated(){
     if(this.auth.isAuthenticated()){
       return true;

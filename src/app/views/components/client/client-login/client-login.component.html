@@ -12,7 +12,7 @@
             <br>
             <mat-form-field appearance="fill" class="pass">
                 <mat-label>Senha</mat-label>
-                <input [(ngModel)]="login.password" matInput placeholder="Ex. password123">
+                <input type="password" [(ngModel)]="login.password" matInput placeholder="Ex. password123">
             </mat-form-field>
             <button (click)="logar()" mat-raised-button color="primary" class="bar">Entrar</button>
             <button (click)="registerNavigate()" mat-raised-button color="accent" class="end">Cadastra-se</button>

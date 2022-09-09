@@ -2,6 +2,8 @@ mat-card{
     width: 80%;
     height: 50%;
     margin: 1rem auto auto auto;
+    background-color: #E3E3E3;
+    color: black;
 }
 
 button{
@@ -41,13 +43,30 @@ h4{
 }
 
 .inital{
+    background-color: black;
+    border: 1px solid white;
+    transition: 1s;
     margin-right: 1rem;
- }
- 
- .center {
-    margin-right: 1rem;
- }
+}
 
+.inital:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+ 
+.center{
+    background-color: black;
+    border: 1px solid white;
+    transition: 1s;
+    margin-right: 1rem;
+}
+
+.center:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
  mat-card{
     width: 80%;
     height: 50%;

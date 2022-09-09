@@ -40,4 +40,8 @@ export class RequestMenuComponent implements OnInit {
   navigatePurchase(){
     this.router.navigate(['request/purchases'])
   }
+
+  navigateLogin(){
+    this.router.navigate(['/client/logado'])
+  }
 }

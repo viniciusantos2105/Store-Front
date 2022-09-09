@@ -48,6 +48,14 @@ h4{
 .bar{
     margin-left: 1rem;
     background-color: black;
+    border: 1px solid white;
+    transition: 1s;
+}
+
+.bar:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .end{

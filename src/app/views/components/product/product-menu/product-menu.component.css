@@ -25,24 +25,58 @@ table {
 }
 
 .inital{
-   margin-right: 1rem;
-   background-color: black;
+    margin-left: 1rem;
+    background-color: black;
+    border: 1px solid white;
+    transition: 1s;
 }
 
-.center {
-   margin-right: 1rem;
-   background-color: black;
+.inital:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+.center{
+    margin-left: 1rem;
+    background-color: black;
+    border: 1px solid white;
+    transition: 1s;
+}
+
+.center:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .final{
+    margin-left: 1rem;
     background-color: black;
+    border: 1px solid white;
+    transition: 1s;
+}
+
+.final:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .meio{
     width: 5%;
     margin-top: 1rem;
     margin-left: 5%;
+    border: 1px solid white;
+    transition: 1s;
     background-color: black;
+}
+
+.meio:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .container{

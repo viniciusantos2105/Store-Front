@@ -53,6 +53,8 @@ import { ProductShortsComponent } from './views/components/product/product-short
 import { ProductSneakersComponent } from './views/components/product/product-sneakers/product-sneakers.component';
 import { ProductHandbagsComponent } from './views/components/product/product-handbags/product-handbags.component';
 import { ProductSkirtComponent } from './views/components/product/product-skirt/product-skirt.component';
+import { RequestsAllComponent } from './views/components/requests/requests-all/requests-all.component';
+import { RequestsSpecificOperatorComponent } from './views/components/requests/requests-specific-operator/requests-specific-operator.component';
 
 
 @NgModule({
@@ -87,7 +89,9 @@ import { ProductSkirtComponent } from './views/components/product/product-skirt/
     ProductShortsComponent,
     ProductSneakersComponent,
     ProductHandbagsComponent,
-    ProductSkirtComponent
+    ProductSkirtComponent,
+    RequestsAllComponent,
+    RequestsSpecificOperatorComponent
   ],
   imports: [
     BrowserModule,

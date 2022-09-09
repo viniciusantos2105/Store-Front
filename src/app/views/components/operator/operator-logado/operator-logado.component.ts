@@ -55,4 +55,16 @@ export class OperatorLogadoComponent implements OnInit {
       }
     })
   }
+
+  navigateAllSales():void{
+    this.service.getOperator(`${this.auth.getUsername()}`).subscribe(resposta =>{
+      this.operatorAuthenticated = resposta
+      if(this.operatorAuthenticated.responsibility == "ADMIN"){
+        this.router.navigate(['request/allPurchases'])
+      }
+      else{
+        this.service.message('Você não tem permissão')
+      }
+    })
+  }
 }

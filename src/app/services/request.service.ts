@@ -38,4 +38,14 @@ export class RequestService {
     const url = `${this.baseUrl}/requests/findByProductId${id}`
     return this.http.get<Request>(url);
   }
+
+  findAllSales():Observable<Request[]>{
+    const url = this.baseUrl + "/requests/findAll"
+    return this.http.get<Request[]>(url);
+  }
+
+  findSpecific(id: any):Observable<Request>{
+    const url = `${this.baseUrl}/requests/findByRequestId${id}`
+    return this.http.get<Request>(url);
+  }
 }

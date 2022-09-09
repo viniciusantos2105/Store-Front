@@ -1,0 +1,111 @@
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    border: #E3E3E3 solid;
+}
+
+.search{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.bar{
+    width: 97%;
+}
+
+
+.inital{
+    margin-right: 1rem;
+    background-color: black;
+    transition: 1s;
+}
+ 
+.inital:hover{
+     border: 1px solid black;
+     background-color: white;
+     color: black;
+}
+
+
+.center{
+    width: 20%;
+    margin-bottom: 1rem;
+    background-color: black;
+    transition: 1s;
+ }
+ 
+ .center:hover{
+     border: 1px solid black;
+     background-color: white;
+     color: black;
+ }
+
+mat-paginator{
+    border-radius: 0 0 12px 12px;
+    background-color: #212121;
+}
+
+table {
+    width: 100%;
+}
+
+mat-label{
+    color: black;
+}
+
+table {
+    width: 100%;
+    background-color: #212121;
+}
+
+mat-icon{
+    cursor: pointer;
+    transition: 1s;
+}
+
+mat-icon :hover{
+    color: white;
+    background-color: black;
+}
+
+.bar{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.mat-elevation-z8{
+    width: 80%;
+    height: 50%;
+    margin: auto auto auto auto;
+}
+
+.container{
+    width: 80%;
+    margin: auto auto auto auto;
+}
+
+.box {
+   text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+.inital{
+   margin-right: 1rem;
+}
+
+.center {
+   margin-right: 1rem;
+}
+
+.meio{
+    width: 5%;
+    margin-top: 1rem;
+    margin-left: 10%;
+}

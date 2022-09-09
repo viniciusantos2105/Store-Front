@@ -27,7 +27,9 @@ import { RegisterComponent } from './views/components/register/register.componen
 import { RequestMenuComponent } from './views/components/requests/request-menu/request-menu.component';
 import { RequestSaleComponent } from './views/components/requests/request-sale/request-sale.component';
 import { RequestSpecificComponent } from './views/components/requests/request-specific/request-specific.component';
+import { RequestsAllComponent } from './views/components/requests/requests-all/requests-all.component';
 import { RequestsClientComponent } from './views/components/requests/requests-client/requests-client.component';
+import { RequestsSpecificOperatorComponent } from './views/components/requests/requests-specific-operator/requests-specific-operator.component';
 
 const routes: Routes = [
   {
@@ -149,6 +151,16 @@ const routes: Routes = [
   {
     path: 'request/purchases/specific/:id',
     component: RequestSpecificComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path: 'request/allPurchases',
+    component: RequestsAllComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path: 'request/allPurchases/specific/:id',
+    component: RequestsSpecificOperatorComponent,
     canActivate:[AuthGuardService]
   },
   {

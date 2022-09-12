@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { OperatorService } from 'src/app/services/operator.service';
   templateUrl: './operator-menu.component.html',
   styleUrls: ['./operator-menu.component.css']
 })
-export class OperatorMenuComponent implements OnInit {
+export class OperatorMenuComponent implements AfterViewInit {
 
   operators: Operator[] = [];
 
@@ -21,9 +21,6 @@ export class OperatorMenuComponent implements OnInit {
 
   constructor(private service: OperatorService,
     private router: Router) { }
-
-  ngOnInit(): void {
-  }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

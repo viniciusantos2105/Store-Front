@@ -41,9 +41,9 @@ export class OperatorService {
         })
     }
 
-    getOperator(username: string): Observable<Operator>{
+    getOperator(token: string): Observable<Operator>{
         const url = this.baseUrl + "/operator/getOperator";
-        return this.http.post<Operator>(url, username);
+        return this.http.get<Operator>(url);
     }
 
     findAll(): Observable<Operator[]>{

@@ -42,12 +42,6 @@ export class ClientUpdateComponent implements OnInit {
     })
   }
 
-  getClientPost(): void{
-    this.service.getClientPost(`${this.auth.getUsername()}`).subscribe(resposta =>{
-      this.client = resposta
-    })
-  }
-
   backNavigate():void{
     this.router.navigate(['client/logado'])
   }

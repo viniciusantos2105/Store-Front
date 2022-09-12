@@ -21,7 +21,7 @@
             <mat-label class="white">Email</mat-label>
             <input [(ngModel)]="client.email" matInput disabled class="white">
         </mat-form-field>
-        <mat-icon (click)="emailNavigate()"> create </mat-icon>
+        <mat-icon matTooltip="Atualizar Email" (click)="emailNavigate()"> create </mat-icon>
         
         <h1>Endereço</h1>
         <mat-form-field appearance="fill" class="bar">
@@ -48,7 +48,7 @@
             <mat-label class="white">Numero</mat-label>
             <input [(ngModel)]="client.address.number" matInput disabled class="white">
         </mat-form-field>
-        <mat-icon (click)="addressNavigate()"> create </mat-icon>
+        <mat-icon  matTooltip="Atualizar Endereço" (click)="addressNavigate()"> create </mat-icon>
     </mat-card>
 </div>
 <button (click)="backNavigate()" mat-raised-button color="primary" class="initial">Voltar</button>

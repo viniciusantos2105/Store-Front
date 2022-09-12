@@ -35,6 +35,7 @@ export class ProductCreateComponent implements OnInit {
     this.service.create(this.product).subscribe((resposta)=>{
       this.service.message('Produto criado com sucesso!!!')
     }, err => {
+      console.log(err)
       if (err.error.error.match('Acesso negado')) {
         this.service.message('Você não tem cargo para realizar essa ação')
       }

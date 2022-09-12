@@ -35,6 +35,7 @@ export class HeaderComponent implements OnInit {
   logout():void{
     localStorage.setItem('username', '')
     localStorage.setItem('token', '')
+    sessionStorage['refresh'] = false;
   }
 
   navigateRequest(): void{

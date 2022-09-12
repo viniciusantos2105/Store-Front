@@ -25,10 +25,17 @@ export class ProductUpdatePriceComponent implements OnInit {
     private service: ProductService) { }
 
   ngOnInit(): void {
+    this.load();
   }
 
   back():void{
     this.router.navigate(['product'])
+  }
+
+  load() {
+    //Session storage salva os dados como string
+    (sessionStorage['refresh'] == 'true' || !sessionStorage['refresh']) && document.location.reload();;
+    sessionStorage['refresh'] = false;
   }
 
   updatePrice():void{

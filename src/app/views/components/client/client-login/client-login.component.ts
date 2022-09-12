@@ -31,7 +31,6 @@ export class ClientLoginComponent implements OnInit {
       localStorage.setItem('token', resposta.token)
       this.router.navigate(['client/logado'])
     this.service.message('Login realizado com sucesso!!!')
-    document.location.reload();
   }, err => {
     if (err.error.error.match('Unauthorized')) {
       this.service.message('Login ou senha inválido')

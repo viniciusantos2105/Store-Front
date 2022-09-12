@@ -48,7 +48,7 @@ export class RequestSaleComponent implements OnInit {
   ngOnInit(): void {
     this.id_tec = this.route.snapshot.paramMap.get('id')!
     this.findById();
-    this.getClientPost();
+    this.client();
   }
 
   sale(): void{
@@ -56,6 +56,7 @@ export class RequestSaleComponent implements OnInit {
       this.service.message('Compra realizada com sucesso')
       this.router.navigate(['request'])
     }, err =>{
+      console.log(err)
       if (err.error.error.match('Endereço não encontrado')) {
         this.service.message(err.error.error)
       }

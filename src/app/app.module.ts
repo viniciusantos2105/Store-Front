@@ -58,6 +58,7 @@ import { RequestsSpecificOperatorComponent } from './views/components/requests/r
 import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
 import { ClientUpdateEmailComponent } from './views/components/client/client-update-email/client-update-email.component';
 import { ClientUpdateAddressComponent } from './views/components/client/client-update-address/client-update-address.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -124,7 +125,8 @@ import { ClientUpdateAddressComponent } from './views/components/client/client-u
     MatDatepickerModule,
     MatPaginatorModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTooltipModule
   ],
   providers: [AuthService, AuthGuardService, {
     provide: HTTP_INTERCEPTORS,

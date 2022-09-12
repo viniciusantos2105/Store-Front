@@ -33,8 +33,8 @@ export class ClientLogadoComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.load()
-    this.getClient()
+    this.load();
+    this.getClient();
   }
 
   getClient(): void{
@@ -44,8 +44,9 @@ export class ClientLogadoComponent implements OnInit {
   }
 
   load() {
-    (sessionStorage['refresh'] == 'true' || !sessionStorage['refresh']) && location.reload();
-    sessionStorage['refresh'] = false;
+    //Session storage salva os dados como string
+    (sessionStorage['refresh'] == 'false' || !sessionStorage['refresh']) && document.location.reload();;
+    sessionStorage['refresh'] = true;
   }
 
   getClientPost(): void{

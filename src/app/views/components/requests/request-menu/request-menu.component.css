@@ -17,29 +17,33 @@
 
 
 .inital{
-    margin-right: 1rem;
+    width: 7%;
     background-color: black;
+    border: 1px solid white;
     transition: 1s;
+    margin-right: 1rem;
 }
- 
+
 .inital:hover{
-     border: 1px solid black;
-     background-color: white;
-     color: black;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }
 
 
 .center{
-    margin-right: 1rem;
+    width: 7%;
     background-color: black;
+    border: 1px solid white;
     transition: 1s;
- }
- 
- .center:hover{
-     border: 1px solid black;
-     background-color: white;
-     color: black;
- }
+    margin-right: 1rem;
+}
+
+.center:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
 
 mat-paginator{
     border-radius: 0 0 12px 12px;

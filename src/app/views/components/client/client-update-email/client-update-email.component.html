@@ -1,0 +1,11 @@
+<div class="box">
+    <mat-card class="two">
+        <h1>Atualizar Email</h1>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Email</mat-label>
+            <input [(ngModel)]="newEmail.email" matInput class="white" placeholder="Ex: email@email.com">
+        </mat-form-field>
+        <button (click)="update()" mat-raised-button color="primary" class="initial">Atualizar</button>
+        <button (click)="backNavigate()" mat-raised-button color="primary" class="cancel">Cancelar</button>
+    </mat-card>
+</div>

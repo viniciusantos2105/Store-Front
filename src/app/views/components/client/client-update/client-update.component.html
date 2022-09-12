@@ -1,0 +1,54 @@
+<div class="box">
+    <mat-card class="two">
+        <h1>Perfil</h1>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Id</mat-label>
+            <input [(ngModel)]="client.id" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar" >
+            <mat-label class="white">Username</mat-label>
+            <input [(ngModel)]="client.username" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Nome</mat-label>
+            <input [(ngModel)]="client.name" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">CPF</mat-label>
+            <input [(ngModel)]="client.cpf" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Email</mat-label>
+            <input [(ngModel)]="client.email" matInput disabled class="white">
+        </mat-form-field>
+        <mat-icon (click)="emailNavigate()"> create </mat-icon>
+        
+        <h1>Endereço</h1>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Cep</mat-label>
+            <input [(ngModel)]="client.address.cep" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Rua</mat-label>
+            <input [(ngModel)]="client.address.rua" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="specific">Bairro</mat-label>
+            <input [(ngModel)]="client.address.bairro" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Cidade</mat-label>
+            <input [(ngModel)]="client.address.cidade" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Estado</mat-label>
+            <input [(ngModel)]="client.address.estado" matInput disabled class="white">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="bar">
+            <mat-label class="white">Numero</mat-label>
+            <input [(ngModel)]="client.address.number" matInput disabled class="white">
+        </mat-form-field>
+        <mat-icon (click)="addressNavigate()"> create </mat-icon>
+    </mat-card>
+</div>
+<button (click)="backNavigate()" mat-raised-button color="primary" class="initial">Voltar</button>

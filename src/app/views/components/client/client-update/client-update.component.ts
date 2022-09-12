@@ -5,11 +5,11 @@ import { AuthService } from 'src/app/services/auth.service';
 import { ClientService } from 'src/app/services/client.service';
 
 @Component({
-  selector: 'app-client-logado',
-  templateUrl: './client-logado.component.html',
-  styleUrls: ['./client-logado.component.css']
+  selector: 'app-client-update',
+  templateUrl: './client-update.component.html',
+  styleUrls: ['./client-update.component.css']
 })
-export class ClientLogadoComponent implements OnInit {
+export class ClientUpdateComponent implements OnInit {
 
   client: Client = {
     id: '',
@@ -29,11 +29,10 @@ export class ClientLogadoComponent implements OnInit {
   }
 
   constructor(private service: ClientService,
-    private auth: AuthService,
-    private router: Router) { }
+    private router: Router,
+    private auth: AuthService) { }
 
   ngOnInit(): void {
-    this.load()
     this.getClient()
   }
 
@@ -43,26 +42,21 @@ export class ClientLogadoComponent implements OnInit {
     })
   }
 
-  load() {
-    (sessionStorage['refresh'] == 'true' || !sessionStorage['refresh']) && location.reload();
-    sessionStorage['refresh'] = false;
-  }
-
   getClientPost(): void{
     this.service.getClientPost(`${this.auth.getUsername()}`).subscribe(resposta =>{
       this.client = resposta
     })
   }
 
-  navigateRequest(): void{
-    this.router.navigate(['request'])
+  backNavigate():void{
+    this.router.navigate(['client/logado'])
   }
 
-  navigatePurchase(){
-    this.router.navigate(['request/purchases'])
+  emailNavigate():void{
+    this.router.navigate(['client/update/email'])
   }
 
-  navigateUpdate(){
-    this.router.navigate(['client/update'])
+  addressNavigate():void{
+    this.router.navigate(['client/update/address'])
   }
 }

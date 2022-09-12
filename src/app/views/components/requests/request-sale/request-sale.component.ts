@@ -48,7 +48,7 @@ export class RequestSaleComponent implements OnInit {
   ngOnInit(): void {
     this.id_tec = this.route.snapshot.paramMap.get('id')!
     this.findById();
-    this.client();
+    this.getClientPost();
   }
 
   sale(): void{
@@ -64,6 +64,13 @@ export class RequestSaleComponent implements OnInit {
 
   client(): void{
     this.clientService.getClient(`${this.auth.getToken()}`).subscribe(resposta =>{
+      this.requestDTO.address = resposta.address.cep
+      this.requestDTO.number = resposta.address.number
+    })
+  }
+
+    getClientPost(): void{
+    this.clientService.getClientPost(`${this.auth.getUsername()}`).subscribe(resposta =>{
       this.requestDTO.address = resposta.address.cep
       this.requestDTO.number = resposta.address.number
     })

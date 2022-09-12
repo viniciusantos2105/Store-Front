@@ -55,6 +55,9 @@ import { ProductHandbagsComponent } from './views/components/product/product-han
 import { ProductSkirtComponent } from './views/components/product/product-skirt/product-skirt.component';
 import { RequestsAllComponent } from './views/components/requests/requests-all/requests-all.component';
 import { RequestsSpecificOperatorComponent } from './views/components/requests/requests-specific-operator/requests-specific-operator.component';
+import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
+import { ClientUpdateEmailComponent } from './views/components/client/client-update-email/client-update-email.component';
+import { ClientUpdateAddressComponent } from './views/components/client/client-update-address/client-update-address.component';
 
 
 @NgModule({
@@ -91,7 +94,10 @@ import { RequestsSpecificOperatorComponent } from './views/components/requests/r
     ProductHandbagsComponent,
     ProductSkirtComponent,
     RequestsAllComponent,
-    RequestsSpecificOperatorComponent
+    RequestsSpecificOperatorComponent,
+    ClientUpdateComponent,
+    ClientUpdateEmailComponent,
+    ClientUpdateAddressComponent
   ],
   imports: [
     BrowserModule,

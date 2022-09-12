@@ -32,13 +32,23 @@ export class ClientService {
 
     getClientPost(username: string): Observable<Client>{
         const url = this.baseUrl + "/client/getClientPost";
-        return this.http.post<Client>(url, username)
+        return this.http.post<Client>(url, username);
     }
 
     token(login: Login): Observable<JwtToken>{
         this.http = new HttpClient(this.httpBack)
-        const url = this.baseUrl + "/client/login"
-        return this.http.post<JwtToken>(url, login)
+        const url = this.baseUrl + "/client/login";
+        return this.http.post<JwtToken>(url, login);
+    }
+
+    updateAddress(newAddress : Client): Observable<Client>{
+        const url = this.baseUrl + "/client/updateAddress";
+        return this.http.patch<Client>(url, newAddress);
+    }
+
+    updateEmail(newEmail : Client): Observable<Client>{
+        const url = this.baseUrl + "/client/updateEmail";
+        return this.http.patch<Client>(url, newEmail);
     }
 
     message(msg : String): void{

@@ -30,6 +30,7 @@ export class OperatorUpdateResponsibilityComponent implements OnInit {
   update():void{
     this.service.updateResponsibility(this.operator).subscribe(resposta =>{
       this.service.message('Operador atualizado')
+      this.router.navigate(['operator'])
     })
   }
 

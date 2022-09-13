@@ -1,4 +1,5 @@
 <div class="container">
+  <br>
   <h1>Atualizar cargo</h1>
   <mat-form-field appearance="fill" class="bar">
     <mat-label>ID</mat-label>
@@ -16,7 +17,7 @@
     <mat-error *ngIf="responsibility.invalid">{{ errorValidResponsibility() }}</mat-error>
   </mat-form-field>
 
-  <button (click)="update()" [disabled]="errorValidResponsibility() || errorValidId()" mat-stroked-button color="accent" class="end">Atualizar operador</button>
+  <button (click)="update()" [disabled]="errorValidResponsibility() || errorValidId()" mat-stroked-button color="accent" class="button">Atualizar operador</button>
   <button (click)="backNavigate()"  mat-stroked-button color="warn" class="cancel">Cancelar</button>
   <p><br></p>
 </div>

@@ -1,4 +1,5 @@
 <div class="container">
+    <br>
     <h1>Atualizar preço do produto</h1>
     <mat-form-field appearance="fill" class="bar">
         <mat-label>Id do produto</mat-label>
@@ -9,5 +10,6 @@
         <input [(ngModel)]="product.price" [formControl]="price" required price="price" matInput placeholder="Ex. 59.90">
     </mat-form-field>
     <button (click)="updatePrice()" mat-raised-button color="primary" class="center">Atualizar preço</button>
-    <button (click)="back()" mat-raised-button color="primary" class="center">Voltar</button>
+    <button (click)="back()" mat-raised-button color="primary" class="back">Voltar</button>
+    <p><br></p>
 </div>

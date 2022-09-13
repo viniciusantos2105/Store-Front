@@ -2,16 +2,13 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #E3E3E3;
-    color: black;
+    background-color: #212121;
+    border-radius: 2rem;
 }
 
-.bar{
-    width: 100%;
-    display: inline;
-}
 
 .center{
+    margin-left: 10%;
     background-color: black;
     border: 1px solid white;
     transition: 1s;
@@ -23,13 +20,27 @@
     border: 1px solid black;
 }
 
+.back{
+    background-color: black;
+    border: 1px solid white;
+    transition: 1s;
+}
+
+.back:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+mat-form-field {
+    width: 80%;
+    margin-left: 10%;
+}
+
 input::placeholder{
     color: gray;
 }
 
-mat-label{
-    color: black;
-}
 
 button{
     width: 20%;

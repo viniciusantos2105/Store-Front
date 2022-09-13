@@ -4,18 +4,21 @@
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #E3E3E3;
-    border-radius: 2px;
+    background-color: #212121;
+    border-radius: 2rem;
     box-shadow:0 0 1em black;
-}
-
-.bar{
-    width: 100%;
-    display: inline;
 }
 
 .box{
     display: flex;
+}
+
+.bar{
+    margin-left: 10%;
+}
+
+mat-form-field{
+    width: 80%;
 }
 
 mat-label{
@@ -36,7 +39,15 @@ button{
 
 h1{
     text-align: center;
-    color: black;
+}
+
+.button{
+    margin-left: 10px;
+}
+
+.end{
+    width: 30%;
+    margin-left: 10%;
 }
 
 .end:disabled{

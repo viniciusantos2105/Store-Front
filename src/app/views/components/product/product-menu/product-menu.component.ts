@@ -23,6 +23,12 @@ export class ProductMenuComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngOnInit(): void {
+    this.load();
+  }
+
+  load(){
+    const HAS_RELOAD = 'hasReload';  // Ao invés de passar a string 'hasRealod' diretamente é melhor criar uma constante para evitar erros de digitação
+    sessionStorage.setItem(HAS_RELOAD, 'false');
   }
 
   createNavigate():void{

@@ -25,10 +25,20 @@ export class ProductUpdateQuantityComponent implements OnInit {
     private service: ProductService) { }
 
   ngOnInit(): void {
+    this.load();
   }
 
   back():void{
     this.router.navigate(['product'])
+  }
+
+  load() {
+    const HAS_RELOAD = 'hasReload';  // Ao invés de passar a string 'hasRealod' diretamente é melhor criar uma constante para evitar erros de digitação
+    const hasReload = sessionStorage.getItem(HAS_RELOAD);
+    if (hasReload == 'false') {
+      sessionStorage.setItem(HAS_RELOAD, 'true');
+      location.reload();
+    }
   }
 
   updateQuantity():void{

@@ -24,7 +24,7 @@ export class OperatorLogadoComponent implements OnInit {
 
   ngOnInit(): void {
     this.load();
-    this.retorno()
+    this.retorno();
   }
 
   retorno() {
@@ -40,7 +40,7 @@ export class OperatorLogadoComponent implements OnInit {
   }
 
   navigateProduct():void{
-    this.service.getOperator(`${this.auth.getUsername()}`).subscribe(resposta =>{
+    this.service.getOperator(`${this.auth.getToken()}`).subscribe(resposta =>{
       this.operatorAuthenticated = resposta
       if(this.operatorAuthenticated.responsibility == "SALESMAN"){
         this.service.message('Você não tem permissão')
@@ -52,7 +52,8 @@ export class OperatorLogadoComponent implements OnInit {
   }
 
   navigateOperatorMenu():void{
-    this.service.getOperator(`${this.auth.getUsername()}`).subscribe(resposta =>{
+    this.service.getOperator(`${this.auth.getToken()}`).subscribe(resposta =>{
+      
       this.operatorAuthenticated = resposta
       if(this.operatorAuthenticated.responsibility == "ADMIN"){
         this.router.navigate(['operator'])
@@ -64,7 +65,7 @@ export class OperatorLogadoComponent implements OnInit {
   }
 
   navigateAllSales():void{
-    this.service.getOperator(`${this.auth.getUsername()}`).subscribe(resposta =>{
+    this.service.getOperator(`${this.auth.getToken()}`).subscribe(resposta =>{
       this.operatorAuthenticated = resposta
       if(this.operatorAuthenticated.responsibility == "STOCKHOLDER"){
         this.service.message('Você não tem permissão')

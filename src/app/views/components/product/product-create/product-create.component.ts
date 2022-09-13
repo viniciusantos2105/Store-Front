@@ -29,6 +29,7 @@ export class ProductCreateComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+    this.load();
   }
 
   create():void{
@@ -40,6 +41,15 @@ export class ProductCreateComponent implements OnInit {
         this.service.message('Você não tem cargo para realizar essa ação')
       }
     })
+  }
+
+  load() {
+    const HAS_RELOAD = 'hasReload';  // Ao invés de passar a string 'hasRealod' diretamente é melhor criar uma constante para evitar erros de digitação
+    const hasReload = sessionStorage.getItem(HAS_RELOAD);
+    if (hasReload == 'false') {
+      sessionStorage.setItem(HAS_RELOAD, 'true');
+      location.reload();
+    }
   }
 
   back():void{

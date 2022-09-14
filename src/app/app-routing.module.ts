@@ -129,7 +129,7 @@ const routes: Routes = [
   {
     path: 'operator/dismiss',
     component: OperatorDeleteComponent,
-
+    canActivate: [AuthGuardService]
   },
   {
     path: 'product',

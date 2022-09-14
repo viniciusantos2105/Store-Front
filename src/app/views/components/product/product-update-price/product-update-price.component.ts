@@ -45,6 +45,7 @@ export class ProductUpdatePriceComponent implements OnInit {
   updatePrice():void{
     this.service.updatePrice(this.product).subscribe(resposta =>{
       this.service.message('Preço do produto atualizado com sucesso!!!')
+      this.router.navigate(['product'])
     })
   }
 }

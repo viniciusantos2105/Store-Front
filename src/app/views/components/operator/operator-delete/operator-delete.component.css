@@ -21,16 +21,8 @@ mat-form-field{
     width: 80%;
 }
 
-mat-label{
-    color: black;
-}
-
 mat-option{
     background-color: black;
-}
-
-input{
-    color: black;
 }
 
 button{

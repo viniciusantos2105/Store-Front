@@ -44,6 +44,7 @@ export class ProductUpdateQuantityComponent implements OnInit {
   updateQuantity():void{
     this.service.updateQuantity(this.product).subscribe(resposta =>{
       this.service.message('Quantidade do produto atualizado com sucesso!!!')
+      this.router.navigate(['product'])
     })
   }
 }

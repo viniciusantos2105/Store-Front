@@ -10,8 +10,14 @@
     <mat-menu #menu="matMenu" class="menu-login">
         <button mat-menu-item class="login" routerLink="login" *ngIf="!authenticated()">Entrar</button>
         <button mat-menu-item class="register" routerLink="register" *ngIf="!authenticated()">Cadastrar-se</button>
-        <button (click)="navigatePurchase()" mat-menu-item class="login" routerLink="login" *ngIf="authenticated()">Suas compras</button>
-        <button (click)="navigateRequest()" mat-menu-item class="register" routerLink="register" *ngIf="authenticated()">Compras</button>
+
+        <button (click)="navigatePurchase()" mat-menu-item class="client" *ngIf="authenticated() && !authOperator()">Suas compras</button>
+        <button (click)="navigateRequest()" mat-menu-item class="client" *ngIf="authenticated() && !authOperator()">Compras</button>
+
+        <button (click)="navigateMenuOperator()" mat-menu-item class="operator" *ngIf="authenticated() && authOperator()">Menu operador</button>
+        <button (click)="navigateMenuProduct()" mat-menu-item class="operator" *ngIf="authenticated() && authOperator()">Menu produtos</button>
+        <button (click)="navigateMenuPedidos()" mat-menu-item class="operator" *ngIf="authenticated() && authOperator()">Menu pedidos</button>
+        
         <button (click)="logout()" mat-menu-item class="logout" routerLink="login" *ngIf="authenticated()">Logout</button>
     </mat-menu>
 

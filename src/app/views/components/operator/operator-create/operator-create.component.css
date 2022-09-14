@@ -66,10 +66,6 @@ mat-option{
     border: 1px white solid;
 }
 
-input{
-    color: black;
-}
-
 input::placeholder{
     color: gray
 }

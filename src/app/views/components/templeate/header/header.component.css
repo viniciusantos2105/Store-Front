@@ -56,6 +56,34 @@ h1{
     background-color: black;
 }
 
+.client{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.client:hover{
+    color: white;
+    background-color: black;
+}
+
+.operator{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.operator:hover{
+    color: white;
+    background-color: black;
+}
+
 .menu-login{
     background-color: white;
 }

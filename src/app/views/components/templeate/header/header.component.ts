@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Client } from 'src/app/models/client';
 import { Operator } from 'src/app/models/operator';
 import { AuthService } from 'src/app/services/auth.service';
+import { ClientService } from 'src/app/services/client.service';
 import { OperatorService } from 'src/app/services/operator.service';
 
 @Component({
@@ -18,9 +20,27 @@ export class HeaderComponent implements OnInit {
     responsibility: ''
   }
 
+  client: Client = {
+    id: '',
+    username: '',
+    name: '',
+    cpf: '',
+    email: '',
+    password: '',
+    address: {
+      cep: '',
+      rua: '',
+      bairro: '',
+      cidade: '',
+      estado: '',
+      number: ''
+    }
+  }
+
   constructor(public auth: AuthService,
     private router: Router,
-    private operatorService: OperatorService) { }
+    private operatorService: OperatorService,
+    private clientService: ClientService) { }
 
   ngOnInit(): void {
   }
@@ -30,11 +50,19 @@ export class HeaderComponent implements OnInit {
       return true;
     }
     return false;
+  }
+
+  authOperator() {
+    if(this.auth.isOperator()){
+      return true;
     }
+    return false;
+  }
 
   logout():void{
     localStorage.setItem('username', '')
     localStorage.setItem('token', '')
+    localStorage.setItem('responsibility', '')
     sessionStorage['refresh'] = false;
   }
 
@@ -48,5 +76,17 @@ export class HeaderComponent implements OnInit {
 
   navigatePurchase(){
     this.router.navigate(['request/purchases'])
+  }
+
+  navigateMenuOperator(): void{
+    this.router.navigate(['operator'])
+  }
+
+  navigateMenuProduct(): void{
+    this.router.navigate(['product'])
+  }
+
+  navigateMenuPedidos(): void{
+    this.router.navigate(['request/allPurchases'])
   }
 }

@@ -27,6 +27,10 @@ export class AuthService{
     return !!localStorage.getItem('token')
   }
 
+  public isOperator(): boolean{
+    return !!localStorage.getItem('responsibility')
+  }
+
  httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json;charset=UTF-8',

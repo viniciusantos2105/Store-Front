@@ -30,6 +30,7 @@ export class OperatorLogadoComponent implements OnInit {
   retorno() {
     this.service.getOperator(`${this.auth.getToken()}`).subscribe(resposta =>{
       this.operatorAuthenticated = resposta
+      localStorage.setItem('responsibility', resposta.responsibility)
     })
   }
 

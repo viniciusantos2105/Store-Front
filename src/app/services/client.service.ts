@@ -7,6 +7,7 @@ import { Client } from "../models/client";
 import { JwtToken } from "../models/jwtToken";
 import { Login } from "../models/login";
 import { Operator } from "../models/operator";
+import { OperatorService } from "./operator.service";
 
 @Injectable({
     providedIn: 'root'
@@ -15,9 +16,17 @@ export class ClientService {
 
     baseUrl: String = environment.baseUrl;
 
+    operator: Operator = {
+        id: '',
+        username: '',
+        password: '',
+        responsibility: ''
+      }
+
     constructor(private http : HttpClient,
         private snack : MatSnackBar,
-        private httpBack : HttpBackend){ }
+        private httpBack : HttpBackend,
+        private operatorService : OperatorService){ }
 
     create(client : Client):Observable<Client>{
         this.http = new HttpClient(this.httpBack)
@@ -58,4 +67,10 @@ export class ClientService {
             duration: 4000
         })
     }
+
+    public validationOperator(){
+        this.operatorService.getOperator(`${this.token}`).subscribe(resposta =>{
+          this.operator = resposta
+        })
+      }
 }

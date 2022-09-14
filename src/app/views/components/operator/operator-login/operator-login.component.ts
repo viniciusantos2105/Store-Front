@@ -26,7 +26,7 @@ export class OperatorLoginComponent implements OnInit {
   }
 
   registerNavigate(): void {
-    this.router.navigate(['register'])
+    this.router.navigate(['operator/create'])
   }
 
   logar() {

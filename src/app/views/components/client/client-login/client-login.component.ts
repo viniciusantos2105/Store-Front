@@ -22,7 +22,7 @@ export class ClientLoginComponent implements OnInit {
   }
 
   registerNavigate(): void{
-    this.router.navigate(['register'])
+    this.router.navigate(['client/create'])
   }
 
   logar() {
